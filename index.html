@@ -116,8 +116,8 @@
       width: 88%;
       aspect-ratio: 3/4;
       object-fit: cover;
-      object-position: right top;
-      border-radius: 55% 45% 48% 52% / 52% 44% 56% 48%;
+      object-position: center top;
+      border-radius: 20px;
       box-shadow: 0 24px 64px rgba(0,0,0,.18);
     }
     .hero-eyebrow {
@@ -139,6 +139,7 @@
     .hero-h1 .underline {
       position: relative;
       display: inline;
+      color: var(--orange);
     }
     .hero-h1 .underline::after {
       content: '';
@@ -826,8 +827,10 @@
       .stats-ribbon-inner { grid-template-columns: 1fr 1fr; }
       .ribbon-stat { border-left: none; border-bottom: 1px solid rgba(255,255,255,.08); }
       .form-row { grid-template-columns: 1fr; }
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-image-col { display: none; }
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .hero-image-col { display: flex; }
+      .hero-img-blob { width: 100%; aspect-ratio: 4/3; object-position: center 20%; }
+      .about-img-wrap { aspect-ratio: 3/4; }
     }
     @media (max-width: 480px) {
       section { padding: 72px 20px; }
@@ -983,10 +986,6 @@
         הם לא מתחברים להפחדות או לסיסמאות כלליות.
         כדי באמת להגיע אליהם, צריך לדבר איתם בגובה העיניים ובשפה שהם מבינים ומרגישים מחוברים אליה.
       </p>
-      <blockquote class="philosophy-quote reveal">
-        "ילדים צריכים שיקשיבו להם — לא שיטיפו להם."
-        <span class="philosophy-attr">חיים גינות, פסיכולוג ילדים</span>
-      </blockquote>
     </div>
     <div class="why-not-list">
       <div class="why-not-item reveal in">
@@ -1020,6 +1019,13 @@
     </div>
   </div>
 </section>
+
+<!-- PULL QUOTE — GINOTT -->
+<div class="pull-quote reveal">
+  <div class="pull-quote-mark">"</div>
+  <p class="pull-quote-text">ילדים צריכים שיקשיבו להם —<br><em>לא שיטיפו להם.</em></p>
+  <div class="pull-quote-source">— חיים גינות, פסיכולוג ילדים</div>
+</div>
 
 <!-- ═══════════════════════════════════════ -->
 <!-- CHAPTER 3 — THE WORKSHOP               -->
@@ -1133,15 +1139,6 @@
     <div class="about-photo-col reveal in">
       <div class="about-img-wrap">
         <img src="images/yagel-headshot.PNG" alt="יגל בר">
-      </div>
-      <div class="about-badge">
-        <div class="badge-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
-        </div>
-        <div class="badge-text">
-          <p>ראיון בערוץ i24 NEWS</p>
-          <span>על מיזם "לזכרם"</span>
-        </div>
       </div>
     </div>
     <div class="about-col">
