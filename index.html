@@ -1428,5 +1428,122 @@
     }
   });
 </script>
+
+<script>
+// Visual Editor — activated via ?edit=yagel2025
+(function () {
+  const PASS = 'yagel2025';
+  const REPO = 'yagelbaracademy-web/elementary-school-workshop';
+  if (new URLSearchParams(location.search).get('edit') !== PASS) return;
+
+  // Inject edit-mode styles
+  const s = document.createElement('style');
+  s.id = 'edit-mode-style';
+  s.textContent = `
+    body { padding-bottom: 68px !important; }
+    .edit-bar {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: #0f172a; color: #fff;
+      padding: 10px 24px; display: flex; align-items: center; justify-content: space-between;
+      z-index: 99999; font-family: system-ui, sans-serif; direction: ltr;
+      box-shadow: 0 -2px 24px rgba(0,0,0,.5);
+    }
+    .eb-btn { padding: 8px 20px; border-radius: 6px; border: none; cursor: pointer; font-size: 13px; font-weight: 700; transition: .15s; }
+    .eb-publish { background: #22c55e; color: #fff; }
+    .eb-publish:hover { background: #16a34a; }
+    .eb-publish:disabled { background: #475569; cursor: default; }
+    .eb-cancel { background: #334155; color: #fff; margin-right: 10px; }
+    .eb-cancel:hover { background: #475569; }
+    [contenteditable]:hover { outline: 2px dashed #60a5fa !important; outline-offset: 3px; cursor: text; }
+    [contenteditable]:focus { outline: 2px solid #3b82f6 !important; outline-offset: 3px; }
+  `;
+  document.head.appendChild(s);
+
+  // Make text elements editable (excluding nav, form, footer)
+  document.querySelectorAll('h1,h2,h3,h4,p,li,blockquote').forEach(el => {
+    if (!el.closest('nav, form, footer')) {
+      el.contentEditable = 'true';
+      el.spellcheck = false;
+    }
+  });
+
+  // Build floating bar
+  const bar = document.createElement('div');
+  bar.className = 'edit-bar';
+  bar.innerHTML = `
+    <span style="color:#fbbf24;font-size:13px;">✏️ &nbsp;מצב עריכה פעיל</span>
+    <span id="eb-status" style="font-size:12px;color:#94a3b8;margin:0 20px;flex:1;text-align:center;">לחץ על כל טקסט בדף כדי לערוך</span>
+    <div>
+      <button class="eb-btn eb-cancel" id="eb-cancel">ביטול</button>
+      <button class="eb-btn eb-publish" id="eb-publish">פרסם שינויים ▶</button>
+    </div>`;
+  document.body.appendChild(bar);
+
+  document.getElementById('eb-cancel').onclick = () => location.href = location.pathname;
+
+  document.getElementById('eb-publish').onclick = async () => {
+    let token = localStorage.getItem('gh_pat');
+    if (!token) {
+      token = prompt('הדבק כאן GitHub Personal Access Token\n(יישמר בדפדפן שלך בלבד ולא יועלה לשום מקום):');
+      if (!token) return;
+      localStorage.setItem('gh_pat', token.trim());
+      token = token.trim();
+    }
+
+    const btn = document.getElementById('eb-publish');
+    const status = document.getElementById('eb-status');
+    btn.disabled = true;
+    status.textContent = 'מפרסם שינויים...';
+
+    try {
+      // Get current file SHA from GitHub
+      const shaRes = await fetch(`https://api.github.com/repos/${REPO}/contents/index.html`, {
+        headers: { Authorization: `token ${token}` }
+      });
+      if (!shaRes.ok) throw new Error('Bad credentials');
+      const { sha } = await shaRes.json();
+
+      // Build clean HTML (strip edit-mode artifacts)
+      const clone = document.documentElement.cloneNode(true);
+      clone.querySelector('#edit-mode-style')?.remove();
+      clone.querySelector('.edit-bar')?.remove();
+      clone.querySelectorAll('[contenteditable]').forEach(el => {
+        el.removeAttribute('contenteditable');
+        el.removeAttribute('spellcheck');
+      });
+      const html = '<!DOCTYPE html>\n' + clone.outerHTML;
+
+      // Push updated file to GitHub
+      const res = await fetch(`https://api.github.com/repos/${REPO}/contents/index.html`, {
+        method: 'PUT',
+        headers: { Authorization: `token ${token}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: 'Update content via visual editor',
+          content: btoa(unescape(encodeURIComponent(html))),
+          sha
+        })
+      });
+
+      if (res.ok) {
+        status.textContent = '✓ פורסם! האתר יתעדכן תוך כ־60 שניות';
+        btn.textContent = '✓ פורסם';
+        btn.style.background = '#16a34a';
+      } else {
+        const e = await res.json();
+        throw new Error(e.message);
+      }
+    } catch (e) {
+      if (e.message?.includes('Bad credentials')) {
+        localStorage.removeItem('gh_pat');
+        status.textContent = 'Token שגוי — נוקה. לחץ "פרסם" שוב והכנס token חדש.';
+      } else {
+        status.textContent = 'שגיאה: ' + (e.message || 'נסה שוב');
+      }
+      btn.disabled = false;
+      btn.textContent = 'פרסם שינויים ▶';
+    }
+  };
+})();
+</script>
 </body>
 </html>
