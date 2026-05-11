@@ -642,6 +642,26 @@
     }
     .promise-check svg { width: 12px; height: 12px; color: var(--orange); }
 
+    /* Philosophy quote */
+    .philosophy-quote {
+      border-right: 4px solid var(--accent);
+      padding: 16px 24px;
+      margin: 32px 0 0;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.6;
+      color: var(--text);
+      font-style: normal;
+      background: rgba(26,86,219,.04);
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* Feelings section */
+    .feelings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-top: 36px; }
+    .feeling-card { background: var(--white); border-radius: 14px; padding: 22px 20px; box-shadow: 0 2px 12px rgba(0,0,0,.05); border-top: 3px solid var(--accent); }
+    .feeling-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .feeling-card p { font-size: 14px; color: var(--text-mid); line-height: 1.6; margin: 0; }
+
     .contact-form {
       background: var(--white);
       border: 1px solid var(--border);
@@ -798,16 +818,17 @@
   <div class="container reveal">
     <div class="hero-eyebrow">סדנה חינוכית · בתי ספר יסודיים</div>
     <h1 class="hero-h1">
-      הילדים שלכם<br>
-      חיים <span class="underline">בתוך</span> הרשת.<br>
-      מישהו צריך<br>
-      לדבר איתם.
+      הילדים של היום<br>
+      לא צריכים עוד הרצאה<br>
+      על סכנות הרשת.<br>
+      הם צריכים מישהו שיבין<br>
+      <span class="underline">אותם.</span>
     </h1>
     <p class="hero-lead">
-      לא עוד הרצאה על סכנות הרשת.
-      לא הפחדות. לא סיסמאות.
-      סדנה שמדברת עם ילדים בגובה העיניים —
-      ומסבירה להם את העולם שהם באמת חיים בו.
+      הם גדלים בתוך עולם דיגיטלי שלא תמיד יודע לעצור.
+      הם מכירים את זה מבפנים.
+      הסדנה הזאת פותחת איתם שיחה אמיתית
+      על העולם שהם חיים בו — בשפה שלהם, בגובה העיניים.
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">לתיאום שיחה ללא עלות</a>
@@ -879,7 +900,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
         <h3>תוכן שתוכנן להתמכר אליו</h3>
-        <p>אלגוריתמים מתוכננים לגרום לנו לא להפסיק לגלול. ילדים לא יודעים שהם המוצר — ולא שיש מישהו שמרוויח מכל שניה שהם על המסך.</p>
+        <p>האלגוריתמים של הרשתות בנויים כדי לגרום לנו להמשיך לגלול ולצפות. ילדים לרוב לא מודעים לכמה זה משפיע עליהם ועל הזמן שהם מבלים מול המסך.</p>
       </div>
       <div class="reality-card c4 reveal reveal-delay-1">
         <div class="reality-card-icon">
@@ -909,7 +930,7 @@
 <!-- PULL QUOTE 1 -->
 <div class="pull-quote reveal">
   <div class="pull-quote-mark">"</div>
-  <p class="pull-quote-text">הרשת היא לא מקום רע.<br>אבל ילד ללא כלים הוא כמו <em>נהג ללא שיעורים.</em></p>
+  <p class="pull-quote-text">ילדים לא נולדים אלימים או רעים.<br>הם גדלים בתוך עולם שמפעיל עליהם המון לחץ, השפעה ורעש.<br><em>והם צריכים כלים להבין אותו.</em></p>
   <div class="pull-quote-source">— יגל בר</div>
 </div>
 
@@ -922,10 +943,15 @@
       <div class="section-divider"></div>
       <h2 class="section-h2">למה ההרצאות הרגילות<br>כבר לא עובדות.</h2>
       <p class="section-lead">
-        ילדים של 2025 חכמים. הם יודעים כשמדברים אליהם מגבוה.
-        הם מרגישים כשמישהו בא לאיים ולהפחיד.
-        והם סוגרים בפנים מי שמגיע בסיסמאות.
+        הילדים של היום חכמים.
+        הם מרגישים מיד כשמדברים אליהם בצורה מרוחקת או מתנשאת.
+        הם לא מתחברים להפחדות או לסיסמאות כלליות.
+        כדי באמת להגיע אליהם, צריך לדבר איתם בגובה העיניים ובשפה שהם מבינים ומרגישים מחוברים אליה.
       </p>
+      <blockquote class="philosophy-quote reveal">
+        ילדים לא צריכים שידברו <strong>עליהם</strong>.<br>
+        הם צריכים שידברו <strong>איתם</strong>.
+      </blockquote>
     </div>
     <div class="why-not-list">
       <div class="why-not-item reveal">
@@ -1017,6 +1043,47 @@
   </div>
 </section>
 
+<!-- FEELINGS AFTER THE WORKSHOP -->
+<section class="warm">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-divider"></div>
+      <h2 class="section-h2">מה הילדים מרגישים<br>אחרי הסדנה.</h2>
+      <p class="section-lead">לא רק מה שהם לומדים. מה שהם יוצאים איתו.</p>
+    </div>
+    <div class="feelings-grid">
+      <div class="feeling-card reveal">
+        <h4>תחושה שמבינים אותם</h4>
+        <p>מישהו סוף סוף דיבר איתם, לא עליהם ולא מגבוה.</p>
+      </div>
+      <div class="feeling-card reveal reveal-delay-1">
+        <h4>הבנה חדשה של הרשת</h4>
+        <p>הם רואים אחרת איך האלגוריתמים משפיעים עליהם ולמה קשה להפסיק לגלול.</p>
+      </div>
+      <div class="feeling-card reveal">
+        <h4>הסתכלות אחרת על מילים בצ'אטים</h4>
+        <p>הם מבינים שמה שנראה "כיף" עשוי לפגוע באמת.</p>
+      </div>
+      <div class="feeling-card reveal reveal-delay-1">
+        <h4>מודעות ללחץ חברתי</h4>
+        <p>הם מזהים מתי הרשת דוחפת אותם להיות מישהו שהם לא.</p>
+      </div>
+      <div class="feeling-card reveal">
+        <h4>תחושת מסוגלות</h4>
+        <p>אני לא קורבן ולא תוקף. אני יכול לבחור איך להתנהג.</p>
+      </div>
+      <div class="feeling-card reveal reveal-delay-1">
+        <h4>השראה להשפיע לטובה</h4>
+        <p>הם יוצאים עם מוטיבציה לעשות משהו טוב גם ברשת.</p>
+      </div>
+      <div class="feeling-card reveal">
+        <h4>בחירה מודעת</h4>
+        <p>הבנה שאפשר לבחור להיות טובים גם מאחורי המסך.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- MID CTA -->
 <div class="mid-cta">
   <p class="reveal">רוצים לשמוע איך הסדנה נראית בבית הספר שלכם?</p>
@@ -1047,23 +1114,20 @@
       <p class="about-role reveal">יוצר תוכן, יזם חברתי ומנחה סדנאות</p>
       <div class="about-story reveal">
         <p>
-          אני לא מגיע לסדנה כ"מומחה" שלמד על הרשת מספרים.
-          אני מגיע כמי שחי בתוכה — 7 שנים של עבודה עם מותגים בינלאומיים,
-          משפיענים, חברות תוכן ותכנים שהגיעו יחד
-          <strong>למאות מיליוני צפיות.</strong>
+          במשך שנים עבדתי בעולם התוכן והרשתות החברתיות,
+          וראיתי מקרוב כמה תוכן משפיע על הדרך שבה ילדים חושבים, מדברים ומתנהגים.
         </p>
         <br>
         <p>
-          אני יודע מה גורם לסרטון להפוך ויראלי.
-          אני יודע איך אלגוריתמים מחליטים מה תראו.
-          אני יודע מה יוצרי תוכן עושים כדי לגרום לכם לא להפסיק.
-          ולכן — אני יכול להסביר את זה לילדים, <strong>בשפה שלהם, בלי להתנשא.</strong>
+          בשלב מסוים הבנתי שילדים לא צריכים עוד מישהו שיגיד להם מה לא לעשות.
+          הם צריכים מישהו שיעזור להם להבין <strong>איך העולם הזה באמת עובד</strong> —
+          ויתן להם כלים לנווט בו בעצמם.
         </p>
         <br>
         <p>
-          בתור ילד, אף פעם לא התחברתי למי שדיבר אליי מגבוה.
-          זה מה שהביא אותי להרצות בצורה שאני מרצה.
-          לא להטיף. לא להפחיד. לדבר <strong>עם</strong> ילדים, לא <strong>אליהם.</strong>
+          אני עדיין זוכר איך זה מרגיש להיות הילד שמרגיש שלא באמת מבינים אותו.
+          אולי בגלל זה היה לי כל כך חשוב לבנות סדנה שלא מדברת <strong>מעל</strong> הילדים,
+          אלא <strong>איתם</strong>.
         </p>
       </div>
       <div class="creds-list reveal">
@@ -1096,8 +1160,12 @@
         ולהנגיש את הזיכרון הלאומי דרך פלטפורמות שהוא כבר חי בהן.
       </p>
       <p>
-        זה ממחיש את מה שאני מלמד בסדנה —
-        <strong>אפשר להשתמש ברשתות חברתיות כדי לרגש, לחבר, ולעשות טוב.</strong>
+        "לזכרם" נולד מתוך אמונה שתוכן לא חייב רק למשוך תשומת לב.
+        הוא יכול גם לחבר בין אנשים, לרגש ולעשות טוב.
+      </p>
+      <p>
+        וזה בדיוק מה שאני מנסה להעביר לילדים:
+        <strong>שלרשתות חברתיות יש כוח. והשאלה היא איך בוחרים להשתמש בו.</strong>
       </p>
       <div class="lezichram-stat">
         <div class="lezichram-stat-num">140<span>M</span></div>
@@ -1252,9 +1320,9 @@
       <div class="section-divider"></div>
       <h2>רוצים לשמוע יותר?<br>בואו נדבר.</h2>
       <p>
-        השאירו פרטים ואחזור אליכם תוך 24 שעות לשיחת היכרות קצרה —
-        ללא עלות ובלי שום מחויבות.
-        רק שיחה אמיתית על הצרכים של בית הספר שלכם.
+        אם גם אתם מבינים כמה רשתות חברתיות, לחץ חברתי ואלימות ברשת משפיעים היום על ילדים,
+        וכמה חשוב לדבר איתם על זה בצורה שהם באמת יקשיבו לה,
+        השאירו פרטים ואחזור אליכם בהקדם.
       </p>
       <div class="contact-promises">
         <div class="promise">
