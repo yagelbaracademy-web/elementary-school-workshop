@@ -144,11 +144,17 @@
     .hero-h1 .underline::after {
       content: '';
       position: absolute;
-      bottom: 4px; right: 0; left: 0;
-      height: 6px;
-      background: rgba(234,88,12,.25);
+      bottom: -3px; right: 0; left: 0;
+      height: 3px;
+      background: var(--orange);
       border-radius: 2px;
-      z-index: -1;
+      z-index: 1;
+      transform: scaleX(0);
+      transform-origin: right;
+      animation: drawUnderline 0.9s cubic-bezier(.4,0,.2,1) 0.6s forwards;
+    }
+    @keyframes drawUnderline {
+      to { transform: scaleX(1); }
     }
     .hero-attr {
       font-size: 16px;
@@ -929,7 +935,7 @@
   <div class="container">
     <div class="reveal in">
       <div class="section-divider"></div>
-      <h2 class="section-h2">זה לא "בעיה של הרשת".<br>זה חיי היומיום שלהם.</h2>
+      <h2 class="section-h2">מה שקורה ברשת<br>נשאר עם הילדים.</h2>
       <p class="section-lead">
         בפעם האחרונה שישבתם בישיבת צוות ושמעתם על ילד שנפגע בצ'אט —
         זה לא היה "אירוע חריג". זה קורה כל יום, בכל בית ספר.
@@ -1203,7 +1209,7 @@
 <section id="lezichram" class="dark">
   <div class="lezichram-inner container-wide">
     <div class="lezichram-content reveal in">
-      <div class="chapter-label"><span></span> כי רשתות חברתיות יכולות לעשות טוב</div>
+      <div class="chapter-label">כי רשתות חברתיות יכולות לעשות טוב</div>
       <h2>מיזם "לזכרם" —<br>ההוכחה שתוכן<br>יכול לרגש ולחבר.</h2>
       <p>
         ב-2022, בגיל 21, הקמתי מיזם שהפך ל<strong>מיזם ההנצחה הגדול ברשתות החברתיות בישראל.</strong>&nbsp;אלפי פוסטים, כל פוסט עוסק בנופל אחר — שמו, תמונתו, סיפורו.
@@ -1276,7 +1282,7 @@
 <section id="gallery">
   <div class="container-wide">
     <div class="reveal in" style="text-align:center;margin-bottom:0">
-      <div class="chapter-label" style="justify-content:center"><span></span> מהשטח</div>
+      <div class="chapter-label" style="justify-content:center">מהשטח</div>
       <h2 class="section-h2">ראו את הסדנה<br>בפעולה.</h2>
     </div>
     <div class="gallery-grid">
@@ -1298,7 +1304,7 @@
 <section id="testimonials" class="warm">
   <div class="container">
     <div class="reveal in" style="text-align:center">
-      <div class="chapter-label" style="justify-content:center"><span></span> מה אומרים</div>
+      <div class="chapter-label" style="justify-content:center">מה אומרים</div>
       <h2 class="section-h2" style="text-align:center">אנשי חינוך<br>שכבר ראו את הסדנה.</h2>
     </div>
     <div class="testimonials-grid">
@@ -1372,7 +1378,7 @@
 <section id="contact">
   <div class="contact-layout">
     <div class="contact-info reveal in">
-      <div class="chapter-label"><span></span> בואו נדבר</div>
+      <div class="chapter-label">בואו נדבר</div>
       <div class="section-divider"></div>
       <h2>רוצים לשמוע יותר?<br>בואו נדבר.</h2>
       <p>
