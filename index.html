@@ -709,6 +709,14 @@
     .feeling-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .feeling-card p { font-size: 14px; color: var(--text-mid); line-height: 1.6; margin: 0; }
 
+    .gapan-banner {
+      display: flex; align-items: center; gap: 10px;
+      background: #f0fdf4; border: 1.5px solid #86efac;
+      border-radius: 10px; padding: 12px 18px;
+      font-size: 14px; color: #166534;
+      margin-bottom: 14px;
+    }
+    .gapan-banner svg { color: #16a34a; flex-shrink: 0; }
     .contact-form {
       background: var(--white);
       border: 1px solid var(--border);
@@ -796,7 +804,7 @@
     }
     .ribbon-stat:last-child { border-left: none; }
     .ribbon-num { font-size: 36px; font-weight: 900; color: var(--white); letter-spacing: -.03em; line-height: 1; margin-bottom: 6px; }
-    .ribbon-num .accent { color: var(--orange); }
+    .ribbon-num .accent { color: var(--white); }
     .ribbon-desc { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.4; }
 
     /* ── FOOTER ── */
@@ -933,7 +941,7 @@
         <div class="reality-card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path></svg>
         </div>
-        <h3>חרמות דיגיטליים</h3>
+        <h3>חרמות על ילדים</h3>
         <p>ילד שלא מוזמן לקבוצה, שמוחקים אותו מהצ'אט, שצוחקים עליו מאחורי המסך — חווה פגיעה רגשית שמלווה אותו גם בזמן השיעורים.</p>
       </div>
       <div class="reality-card c2 reveal reveal-delay-1 in">
@@ -976,7 +984,7 @@
 </section>
 
 <!-- PULL QUOTE 1 -->
-<div class="pull-quote reveal in">
+<div class="pull-quote reveal in" style="padding-top:44px">
   <div class="pull-quote-mark">"</div>
   <p class="pull-quote-text">אוריינות דיגיטלית היא לא רק לדעת להשתמש בטכנולוגיה —<br><em>אלא להבין אותה, לשאול שאלות ולהשתמש בה באחריות.</em></p>
   <div class="pull-quote-source">— מייק ריבל, חוקר ומרצה בתחום האזרחות הדיגיטלית</div>
@@ -1399,7 +1407,11 @@
         </div>
       </div>
     </div>
-    <div class="contact-form reveal reveal-delay-1 in">
+    <div class="gapan-banner reveal reveal-delay-1">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      הסדנה ניתנת למימון דרך <strong>תקציב גפן</strong>
+    </div>
+    <div class="contact-form reveal reveal-delay-1">
       <h3>השאירו פרטים</h3>
       <form id="contactForm" action="https://formspree.io/f/mlgzapeo" method="POST" novalidate="">
         <div class="form-row">
