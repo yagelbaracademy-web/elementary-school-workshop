@@ -144,17 +144,11 @@
     .hero-h1 .underline::after {
       content: '';
       position: absolute;
-      bottom: -3px; right: 0; left: 0;
-      height: 3px;
-      background: var(--orange);
+      bottom: 4px; right: 0; left: 0;
+      height: 6px;
+      background: rgba(234,88,12,.25);
       border-radius: 2px;
-      z-index: 1;
-      transform: scaleX(0);
-      transform-origin: right;
-      animation: drawUnderline 0.9s cubic-bezier(.4,0,.2,1) 0.6s forwards;
-    }
-    @keyframes drawUnderline {
-      to { transform: scaleX(1); }
+      z-index: -1;
     }
     .hero-attr {
       font-size: 16px;
@@ -873,7 +867,7 @@
 <!-- ═══════════════════════════════════════ -->
 <section id="hero">
   <div class="hero-inner">
-    <div class="hero-text reveal">
+    <div class="hero-text reveal in">
       <div class="hero-eyebrow">סדנה חינוכית · בתי ספר יסודיים</div>
       <h1 class="hero-h1">
         "ילדים לא נולדים אלימים או רעים.
@@ -892,8 +886,8 @@
         </a>
       </div>
     </div>
-    <div class="hero-image-col reveal reveal-delay-1">
-      <img src="images/hero-kids.png" alt="ילד מול הטלפון" class="hero-img-blob" />
+    <div class="hero-image-col reveal reveal-delay-1 in">
+      <img src="images/hero-kids.png" alt="ילד מול הטלפון" class="hero-img-blob">
     </div>
   </div>
 </section>
@@ -927,7 +921,7 @@
   <div class="container">
     <div class="reveal in">
       <div class="section-divider"></div>
-      <h2 class="section-h2">מה שקורה ברשת<br>נשאר עם הילדים.</h2>
+      <h2 class="section-h2">זה לא "בעיה של הרשת".<br>זה חיי היומיום שלהם.</h2>
       <p class="section-lead">
         בפעם האחרונה שישבתם בישיבת צוות ושמעתם על ילד שנפגע בצ'אט —
         זה לא היה "אירוע חריג". זה קורה כל יום, בכל בית ספר.
@@ -993,7 +987,7 @@
 <!-- ═══════════════════════════════════════ -->
 <section id="why-not" class="warm">
   <div class="container">
-    <div class="reveal">
+    <div class="reveal in">
       <div class="section-divider"></div>
       <h2 class="section-h2">למה ההרצאות הרגילות<br>כבר לא עובדות.</h2>
       <p class="section-lead">
@@ -1007,7 +1001,7 @@
 </section>
 
 <!-- PULL QUOTE — GINOTT -->
-<div class="pull-quote reveal">
+<div class="pull-quote reveal in">
   <div class="pull-quote-mark">"</div>
   <p class="pull-quote-text">ילדים צריכים שיקשיבו להם —<br><em>לא שיטיפו להם.</em></p>
   <div class="pull-quote-source">— חיים גינות, פסיכולוג ילדים</div>
@@ -1016,28 +1010,28 @@
 <section class="warm">
   <div class="container">
     <div class="why-not-list">
-      <div class="why-not-item reveal">
+      <div class="why-not-item reveal in">
         <div class="why-not-num">01</div>
         <div>
           <h3>"הרשת מסוכנת — אל תשתמשו בה"</h3>
           <p>גישה שמשיגה את ההפך. ילדים שמרגישים שמטיפים להם — יסגרו. הפחדות מייצרות התנגדות, לא שינוי. ילדים לא צריכים להפחד מהרשת. הם צריכים להבין אותה.</p>
         </div>
       </div>
-      <div class="why-not-item reveal">
+      <div class="why-not-item reveal in">
         <div class="why-not-num">02</div>
         <div>
           <h3>הרצאה חד-כיוונית שמדברת עליהם</h3>
-          <p>ילד שיושב ומקשיב לבוגר שמדבר על "סכנות האינטרנט" — הולך לאיבוד אחרי 7 דקות. הם צריכים לדבר, לשאול, לשתף. לא לשבת ולהקשיב.</p>
+          <p>ילד שיושב ומקשיב לבוגר שמדבר על "סכנות האינטרנט" — הולך לאיבוד אחרי 7 דקות. הם צריכים שידברו איתם במשוגים שהם מכירים, ולקחת חלק בשיחה, לדבר, לשאול, לשתף.</p>
         </div>
       </div>
-      <div class="why-not-item reveal">
+      <div class="why-not-item reveal in">
         <div class="why-not-num">03</div>
         <div>
           <h3>מי שמגיע מ"בחוץ" — פחות אמין</h3>
           <p>ילדים מחוברים להבנה אמיתית. מרצה שלמד על הנושא בספרים שונה ממרצה שחי בתוך עולם התוכן הדיגיטלי. הם מרגישים את ההבדל.</p>
         </div>
       </div>
-      <div class="why-not-item reveal">
+      <div class="why-not-item reveal in">
         <div class="why-not-num">04</div>
         <div>
           <h3>לדבר על הרשת מבחוץ</h3>
@@ -1148,8 +1142,8 @@
 
 <!-- MID CTA -->
 <div class="mid-cta">
-  <p class="reveal">הסדנה הזאת יכולה להגיע גם אליכם.</p>
-  <a href="#contact" class="btn-primary reveal reveal-delay-1">להזמנת הסדנה ←</a>
+  <p class="reveal in">הסדנה הזאת יכולה להגיע גם אליכם.</p>
+  <a href="#contact" class="btn-primary reveal reveal-delay-1 in">להזמנת הסדנה ←</a>
 </div>
 
 <!-- ═══════════════════════════════════════ -->
@@ -1201,7 +1195,7 @@
 <section id="lezichram" class="dark">
   <div class="lezichram-inner container-wide">
     <div class="lezichram-content reveal in">
-      <div class="chapter-label">כי רשתות חברתיות יכולות לעשות טוב</div>
+      <div class="chapter-label"><span></span> כי רשתות חברתיות יכולות לעשות טוב</div>
       <h2>מיזם "לזכרם" —<br>ההוכחה שתוכן<br>יכול לרגש ולחבר.</h2>
       <p>
         ב-2022, בגיל 21, הקמתי מיזם שהפך ל<strong>מיזם ההנצחה הגדול ברשתות החברתיות בישראל.</strong>&nbsp;אלפי פוסטים, כל פוסט עוסק בנופל אחר — שמו, תמונתו, סיפורו.
@@ -1262,7 +1256,7 @@
     </div>
     <div class="scroll-arrow">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 12 15 18 9"/>
+        <polyline points="6 9 12 15 18 9"></polyline>
       </svg>
     </div>
   </div>
@@ -1274,7 +1268,7 @@
 <section id="gallery">
   <div class="container-wide">
     <div class="reveal in" style="text-align:center;margin-bottom:0">
-      <div class="chapter-label" style="justify-content:center">מהשטח</div>
+      <div class="chapter-label" style="justify-content:center"><span></span> מהשטח</div>
       <h2 class="section-h2">ראו את הסדנה<br>בפעולה.</h2>
     </div>
     <div class="gallery-grid">
@@ -1296,7 +1290,7 @@
 <section id="testimonials" class="warm">
   <div class="container">
     <div class="reveal in" style="text-align:center">
-      <div class="chapter-label" style="justify-content:center">מה אומרים</div>
+      <div class="chapter-label" style="justify-content:center"><span></span> מה אומרים</div>
       <h2 class="section-h2" style="text-align:center">אנשי חינוך<br>שכבר ראו את הסדנה.</h2>
     </div>
     <div class="testimonials-grid">
@@ -1320,7 +1314,7 @@
           </div>
         </div>
       </div>
-      <div class="tcard reveal">
+      <div class="tcard reveal in">
         <div class="tcard-header">
           <div class="tcard-org">אופק חינוכי — עיריית אלעד</div>
           <div class="tcard-stars">
@@ -1340,7 +1334,7 @@
           </div>
         </div>
       </div>
-      <div class="tcard reveal">
+      <div class="tcard reveal in">
         <div class="tcard-header">
           <div class="tcard-org">בית ספר אבני החושן — שוהם</div>
           <div class="tcard-stars">
@@ -1369,8 +1363,8 @@
 <!-- ═══════════════════════════════════════ -->
 <section id="contact">
   <div class="contact-layout">
-    <div class="contact-info reveal">
-      <div class="chapter-label">בואו נדבר</div>
+    <div class="contact-info reveal in">
+      <div class="chapter-label"><span></span> בואו נדבר</div>
       <div class="section-divider"></div>
       <h2>רוצים לשמוע יותר?<br>בואו נדבר.</h2>
       <p>
@@ -1405,7 +1399,7 @@
         </div>
       </div>
     </div>
-    <div class="contact-form reveal reveal-delay-1">
+    <div class="contact-form reveal reveal-delay-1 in">
       <h3>השאירו פרטים</h3>
       <form id="contactForm" action="https://formspree.io/f/mlgzapeo" method="POST" novalidate="">
         <div class="form-row">
@@ -1432,7 +1426,7 @@
           <label for="f-msg">מה הכי מעניין אתכם לשמוע?</label>
           <textarea id="f-msg" name="message" placeholder="ספרו לי קצת על בית הספר שלכם, מה מעניין אתכם בסדנה, שאלות שיש לכם..."></textarea>
         </div>
-        <button type="submit" class="btn-submit">שלחו — ונחזור אליכם בהקדם</button>
+        <button type="submit" class="btn-submit">שלחו — ואחזור תוך 24 שעות</button>
         <p class="form-note">ללא לחץ. ללא מחויבות. רק שיחה.</p>
         <div class="form-success" id="formSuccess">
           <div class="form-success-icon">
@@ -1536,12 +1530,12 @@
         });
       } else {
         btn.disabled = false;
-        btn.textContent = 'שלחו — ונחזור אליכם בהקדם';
+        btn.textContent = 'שלחו — ואחזור תוך 24 שעות';
         alert('אירעה שגיאה בשליחה. אנא נסו שוב או צרו קשר ישירות.');
       }
     } catch {
       btn.disabled = false;
-      btn.textContent = 'שלחו — ונחזור אליכם בהקדם';
+      btn.textContent = 'שלחו — ואחזור תוך 24 שעות';
       alert('אירעה שגיאה בשליחה. אנא נסו שוב או צרו קשר ישירות.');
     }
   });
