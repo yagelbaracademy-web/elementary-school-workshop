@@ -1426,7 +1426,7 @@
           <label for="f-msg">מה הכי מעניין אתכם לשמוע?</label>
           <textarea id="f-msg" name="message" placeholder="ספרו לי קצת על בית הספר שלכם, מה מעניין אתכם בסדנה, שאלות שיש לכם..."></textarea>
         </div>
-        <button type="submit" class="btn-submit">שלחו — ואחזור תוך 24 שעות</button>
+        <button type="submit" class="btn-submit">שלחו — ונחזור אליכם בהקדם</button>
         <p class="form-note">ללא לחץ. ללא מחויבות. רק שיחה.</p>
         <div class="form-success" id="formSuccess">
           <div class="form-success-icon">
@@ -1530,12 +1530,12 @@
         });
       } else {
         btn.disabled = false;
-        btn.textContent = 'שלחו — ואחזור תוך 24 שעות';
+        btn.textContent = 'שלחו — ונחזור אליכם בהקדם';
         alert('אירעה שגיאה בשליחה. אנא נסו שוב או צרו קשר ישירות.');
       }
     } catch {
       btn.disabled = false;
-      btn.textContent = 'שלחו — ואחזור תוך 24 שעות';
+      btn.textContent = 'שלחו — ונחזור אליכם בהקדם';
       alert('אירעה שגיאה בשליחה. אנא נסו שוב או צרו קשר ישירות.');
     }
   });
