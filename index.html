@@ -152,11 +152,13 @@
     .gapan-badge-label strong { display: block; font-size: 14px; font-weight: 800; color: #fff; }
     .gapan-badge-label span { font-size: 12px; font-weight: 700; color: rgba(255,255,255,.85); }
     .hero-eyebrow {
-      font-size: 13px; font-weight: 600;
-      color: var(--text-soft);
-      letter-spacing: .06em;
-      text-transform: uppercase;
       margin-bottom: 28px;
+    }
+    .workshop-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--orange); color: #fff;
+      font-size: 13px; font-weight: 700; letter-spacing: .01em;
+      padding: 6px 16px; border-radius: 100px;
     }
     .hero-h1 {
       font-size: clamp(28px, 4.5vw, 56px);
@@ -955,7 +957,7 @@
 <!-- NAV -->
 <nav id="nav" class="solid">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">יגל בר <span>×</span> ילדים ברשת</a>
+    <a href="#" class="nav-logo">ילדים ברשת <span>×</span> יגל בר</a>
     <a href="#contact" class="nav-cta">בואו נדבר</a>
   </div>
 </nav>
@@ -966,7 +968,7 @@
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-text reveal in">
-      <div class="hero-eyebrow">סדנה חינוכית · בתי ספר יסודיים</div>
+      <div class="hero-eyebrow"><span class="workshop-pill">סדנת "ילדים ברשת"</span></div>
       <h1 class="hero-h1">
         "ילדים לא נולדים אלימים או רעים.
         הם גדלים בתוך עולם שמפעיל עליהם המון לחץ והשפעה.
