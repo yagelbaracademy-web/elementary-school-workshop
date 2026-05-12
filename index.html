@@ -518,6 +518,48 @@
       object-fit: cover;
       display: block;
     }
+    .lezichram-insta-row {
+      display: flex; gap: 10px; margin-top: 14px;
+    }
+    .insta-thumb {
+      flex: 1; aspect-ratio: 1; border-radius: 10px;
+      overflow: hidden; cursor: pointer; position: relative; margin: 0;
+    }
+    .insta-thumb img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.25s;
+    }
+    .insta-thumb:hover img { transform: scale(1.06); }
+    .insta-overlay {
+      position: absolute; inset: 0; background: rgba(0,0,0,.35);
+      opacity: 0; transition: opacity 0.2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .insta-thumb:hover .insta-overlay { opacity: 1; }
+    .insta-overlay svg { width: 32px; height: 32px; stroke: #fff; }
+
+    /* Lightbox */
+    #lightbox {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,.88); z-index: 9999;
+      align-items: center; justify-content: center; cursor: pointer;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 92vw; max-height: 88vh;
+      border-radius: 10px; object-fit: contain;
+      box-shadow: 0 24px 64px rgba(0,0,0,.6);
+      cursor: default;
+    }
+    .lb-close {
+      position: fixed; top: 18px; left: 22px;
+      background: rgba(255,255,255,.12); border: none;
+      color: #fff; font-size: 28px; line-height: 1;
+      width: 44px; height: 44px; border-radius: 50%;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s;
+    }
+    .lb-close:hover { background: rgba(255,255,255,.25); }
     .lezichram-badge {
       position: absolute;
       bottom: -20px; right: -20px;
@@ -1210,7 +1252,7 @@
   <div class="lezichram-inner container-wide">
     <div class="lezichram-content reveal in">
       <div class="chapter-label">כי רשתות חברתיות יכולות לעשות טוב</div>
-      <h2>מיזם "לזכרם" —<br>ההוכחה שתוכן<br>יכול לרגש ולחבר.</h2>
+      <h2>מיזם <span style="color:var(--orange)">"לזכרם"</span> —<br>ההוכחה שתוכן<br>יכול לרגש ולחבר.</h2>
       <p>
         ב-2022, בגיל 21, הקמתי מיזם שהפך ל<strong>מיזם ההנצחה הגדול ברשתות החברתיות בישראל.</strong>&nbsp;אלפי פוסטים, כל פוסט עוסק בנופל אחר — שמו, תמונתו, סיפורו.
         אנשים קוראים, מגיבים, מתרגשים, ומשתפים.
@@ -1235,6 +1277,20 @@
     <div class="lezichram-image reveal reveal-delay-1 in">
       <div class="lezichram-img-card">
         <img src="images/yagel-lecture.jpg" alt="יגל בר מציג את מיזם &quot;לזכרם&quot;">
+      </div>
+      <div class="lezichram-insta-row">
+        <figure class="insta-thumb" onclick="openLightbox('images/lezichram post screenshot.jpg')" title="לחץ להגדלה">
+          <img src="images/lezichram post screenshot.jpg" alt="פוסט מאינסטגרם לזכרם">
+          <div class="insta-overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+          </div>
+        </figure>
+        <figure class="insta-thumb" onclick="openLightbox('images/lezichram instagram page .jpg')" title="לחץ להגדלה">
+          <img src="images/lezichram instagram page .jpg" alt="עמוד לזכרם באינסטגרם">
+          <div class="insta-overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+          </div>
+        </figure>
       </div>
       <div class="lezichram-badge">
         <div class="lezichram-badge-icon">
@@ -1676,5 +1732,24 @@
 })();
 </script>
 
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <button class="lb-close" onclick="event.stopPropagation();closeLightbox()" aria-label="סגור">✕</button>
+  <img id="lb-img" src="" alt="" onclick="event.stopPropagation()">
+</div>
+<script>
+  function openLightbox(src) {
+    document.getElementById('lb-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
 
 </body></html>
