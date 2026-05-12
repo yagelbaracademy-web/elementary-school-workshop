@@ -518,25 +518,32 @@
       object-fit: cover;
       display: block;
     }
-    .lezichram-insta-row {
-      display: flex; gap: 10px; margin-top: 14px;
+    .insta-card {
+      border-radius: 10px; overflow: hidden; cursor: pointer; position: relative;
+      box-shadow: 0 12px 36px rgba(0,0,0,.55), 0 3px 10px rgba(0,0,0,.3);
     }
-    .insta-thumb {
-      flex: 1; aspect-ratio: 1; border-radius: 10px;
-      overflow: hidden; cursor: pointer; position: relative; margin: 0;
-    }
-    .insta-thumb img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
-      transition: transform 0.25s;
-    }
-    .insta-thumb:hover img { transform: scale(1.06); }
+    .insta-card img { width: 100%; height: auto; display: block; }
     .insta-overlay {
-      position: absolute; inset: 0; background: rgba(0,0,0,.35);
+      position: absolute; inset: 0; background: rgba(0,0,0,.3);
       opacity: 0; transition: opacity 0.2s;
       display: flex; align-items: center; justify-content: center;
     }
-    .insta-thumb:hover .insta-overlay { opacity: 1; }
-    .insta-overlay svg { width: 32px; height: 32px; stroke: #fff; }
+    .insta-card:hover .insta-overlay { opacity: 1; }
+    .insta-overlay svg { width: 30px; height: 30px; stroke: #fff; }
+
+    /* Desktop: floating on lecture photo */
+    .insta-float {
+      position: absolute; width: 44%;
+      transition: transform 0.25s; cursor: pointer;
+    }
+    .insta-float-1 { bottom: 30px; left: 2%; transform: rotate(-3deg); z-index: 2; }
+    .insta-float-2 { bottom: 14px; left: 40%; transform: rotate(2deg); z-index: 1; }
+    .insta-float-1:hover { transform: scale(1.05) rotate(-1deg); z-index: 4; }
+    .insta-float-2:hover { transform: scale(1.05) rotate(0.5deg); z-index: 4; }
+
+    /* Mobile: row below heading — hidden by default (desktop) */
+    .insta-row-mobile { display: none; gap: 10px; margin: 14px 0 20px; }
+    .insta-row-mobile .insta-card { flex: 1; }
 
     /* Lightbox */
     #lightbox {
@@ -887,6 +894,8 @@
       .about-img-wrap { aspect-ratio: 16/9; }
       .lezichram-inner { grid-template-columns: 1fr; }
       .lezichram-badge { right: 16px; bottom: 16px; }
+      .insta-float { display: none; }
+      .insta-row-mobile { display: flex; }
       .gallery-grid { grid-template-columns: 1fr; }
       .gallery-item img { height: 260px; }
       .contact-layout { grid-template-columns: 1fr; gap: 40px; }
@@ -1237,9 +1246,9 @@
         <div class="cred-item"><div class="cred-dot"></div> 7+ שנות ניסיון ביצירת תוכן ורשתות חברתיות</div>
         <div class="cred-item"><div class="cred-dot"></div> בוגר ניהול מוצר — הטכניון</div>
         <div class="cred-item"><div class="cred-dot"></div> מייסד "לזכרם" — 140 מיליון צפיות באינסטגרם</div>
-        <div class="cred-item"><div class="cred-dot"></div> עבד עם חברות בינלאומיות ומשפיענים מובילים</div>
+        <div class="cred-item"><div class="cred-dot"></div> עובד עם חברות בינלאומיות ומשפיענים מובילים</div>
         <div class="cred-item"><div class="cred-dot"></div> ראיון על מיזם "לזכרם" בערוץ i24 NEWS</div>
-        <div class="cred-item"><div class="cred-dot"></div> מנחה סדנאות ביסודיים, חטיב ותיכון</div>
+        <div class="cred-item"><div class="cred-dot"></div> מנחה סדנאות בבתי ספר יסודי, חטיבה ותיכון</div>
       </div>
     </div>
   </div>
@@ -1253,6 +1262,16 @@
     <div class="lezichram-content reveal in">
       <div class="chapter-label">כי רשתות חברתיות יכולות לעשות טוב</div>
       <h2>מיזם <span style="color:var(--orange)">"לזכרם"</span> —<br>ההוכחה שתוכן<br>יכול לרגש ולחבר.</h2>
+      <div class="insta-row-mobile">
+        <div class="insta-card" onclick="openLightbox('images/lezichram post screenshot.jpg')">
+          <img src="images/lezichram post screenshot.jpg" alt="פוסט לזכרם">
+          <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg></div>
+        </div>
+        <div class="insta-card" onclick="openLightbox('images/lezichram instagram page .jpg')">
+          <img src="images/lezichram instagram page .jpg" alt="עמוד לזכרם באינסטגרם">
+          <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg></div>
+        </div>
+      </div>
       <p>
         ב-2022, בגיל 21, הקמתי מיזם שהפך ל<strong>מיזם ההנצחה הגדול ברשתות החברתיות בישראל.</strong>&nbsp;אלפי פוסטים, כל פוסט עוסק בנופל אחר — שמו, תמונתו, סיפורו.
         אנשים קוראים, מגיבים, מתרגשים, ומשתפים.
@@ -1278,19 +1297,17 @@
       <div class="lezichram-img-card">
         <img src="images/yagel-lecture.jpg" alt="יגל בר מציג את מיזם &quot;לזכרם&quot;">
       </div>
-      <div class="lezichram-insta-row">
-        <figure class="insta-thumb" onclick="openLightbox('images/lezichram post screenshot.jpg')" title="לחץ להגדלה">
-          <img src="images/lezichram post screenshot.jpg" alt="פוסט מאינסטגרם לזכרם">
-          <div class="insta-overlay">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
-          </div>
-        </figure>
-        <figure class="insta-thumb" onclick="openLightbox('images/lezichram instagram page .jpg')" title="לחץ להגדלה">
+      <div class="insta-float insta-float-1" onclick="openLightbox('images/lezichram post screenshot.jpg')">
+        <div class="insta-card">
+          <img src="images/lezichram post screenshot.jpg" alt="פוסט לזכרם">
+          <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg></div>
+        </div>
+      </div>
+      <div class="insta-float insta-float-2" onclick="openLightbox('images/lezichram instagram page .jpg')">
+        <div class="insta-card">
           <img src="images/lezichram instagram page .jpg" alt="עמוד לזכרם באינסטגרם">
-          <div class="insta-overlay">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
-          </div>
-        </figure>
+          <div class="insta-overlay"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg></div>
+        </div>
       </div>
       <div class="lezichram-badge">
         <div class="lezichram-badge-icon">
