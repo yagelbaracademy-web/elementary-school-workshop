@@ -112,14 +112,46 @@
       align-items: center;
       justify-content: center;
     }
-    .hero-img-blob {
+    .hero-img-wrap {
+      position: relative;
       width: 88%;
+    }
+    .hero-img-blob {
+      width: 100%;
       aspect-ratio: 3/4;
       object-fit: cover;
       object-position: center top;
       border-radius: 20px;
       box-shadow: 0 24px 64px rgba(0,0,0,.18);
+      display: block;
     }
+    .gapan-badge {
+      position: absolute;
+      bottom: -20px; right: -24px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 14px 18px;
+      display: flex; align-items: center; gap: 12px;
+      box-shadow: 0 16px 48px rgba(0,0,0,.14), 0 2px 10px rgba(0,0,0,.08);
+      border-right: 4px solid #16a34a;
+      white-space: nowrap;
+      z-index: 3;
+      animation: badgeIn 0.7s cubic-bezier(.34,1.56,.64,1) 1s both;
+    }
+    @keyframes badgeIn {
+      from { opacity: 0; transform: translateY(14px) scale(.94); }
+      to   { opacity: 1; transform: translateY(0)   scale(1); }
+    }
+    .gapan-badge-icon {
+      width: 42px; height: 42px;
+      background: #f0fdf4; border-radius: 11px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .gapan-badge-icon svg { width: 22px; height: 22px; }
+    .gapan-badge-label { line-height: 1.3; }
+    .gapan-badge-label strong { display: block; font-size: 14px; font-weight: 800; color: #111; }
+    .gapan-badge-label span { font-size: 12px; color: #6b7280; }
     .hero-eyebrow {
       font-size: 13px; font-weight: 600;
       color: var(--text-soft);
@@ -904,7 +936,9 @@
       .form-row { grid-template-columns: 1fr; }
       .hero-inner { grid-template-columns: 1fr; gap: 32px; }
       .hero-image-col { display: flex; }
+      .hero-img-wrap { width: 100%; }
       .hero-img-blob { width: 100%; aspect-ratio: 4/3; object-position: center 20%; }
+      .gapan-badge { right: 12px; bottom: -18px; }
       .about-img-wrap { aspect-ratio: 3/4; }
     }
     @media (max-width: 480px) {
@@ -952,7 +986,20 @@
       </div>
     </div>
     <div class="hero-image-col reveal reveal-delay-1 in">
-      <img src="images/hero-kids.png" alt="ילד מול הטלפון" class="hero-img-blob">
+      <div class="hero-img-wrap">
+        <img src="images/hero-kids.png" alt="ילד מול הטלפון" class="hero-img-blob">
+        <div class="gapan-badge">
+          <div class="gapan-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+          </div>
+          <div class="gapan-badge-label">
+            <strong>ניתן למימון</strong>
+            <span>דרך תקציב גפן</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
