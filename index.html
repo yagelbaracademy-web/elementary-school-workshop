@@ -1009,7 +1009,45 @@
       .stats-ribbon-inner { grid-template-columns: 1fr 1fr; }
       .module { grid-template-columns: 1fr; }
       .module-num { width: 44px; height: 44px; }
+      .who-grid { gap: 14px; }
+      .who-chip { font-size: 16px; padding: 18px 20px; }
+      .faq-q { font-size: 16px; }
+      .faq-a { font-size: 15px; }
     }
+
+    /* ── WHO ── */
+    #who { background: #f8f8f6; }
+    .who-grid {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 20px; max-width: 860px; margin: 48px auto 0;
+    }
+    .who-chip {
+      background: #fff;
+      border-radius: 16px;
+      padding: 22px 32px;
+      font-size: 18px; font-weight: 800; color: var(--text);
+      box-shadow: 0 8px 28px rgba(0,0,0,.09);
+      animation: floatChip 3.6s ease-in-out infinite;
+      cursor: default;
+    }
+    .who-chip:nth-child(1) { animation-delay: 0s; }
+    .who-chip:nth-child(2) { animation-delay: 0.5s; }
+    .who-chip:nth-child(3) { animation-delay: 1s; }
+    .who-chip:nth-child(4) { animation-delay: 0.3s; }
+    .who-chip:nth-child(5) { animation-delay: 0.8s; }
+    .who-chip:nth-child(6) { animation-delay: 1.3s; }
+    @keyframes floatChip {
+      0%, 100% { transform: translateY(0);    box-shadow: 0 8px 28px rgba(0,0,0,.09); }
+      50%       { transform: translateY(-10px); box-shadow: 0 20px 44px rgba(0,0,0,.13); }
+    }
+
+    /* ── FAQ ── */
+    #faq { background: var(--bg); }
+    .faq-list { max-width: 720px; margin: 48px auto 0; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 28px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 17px; font-weight: 800; color: var(--text); margin-bottom: 10px; }
+    .faq-a { font-size: 16px; color: var(--text-soft); line-height: 1.75; }
   </style>
 </head>
 <body>
@@ -1539,6 +1577,62 @@
             <div class="author-role">מנהלת בית חינוך, אבני החושן שוהם</div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- WHO                                     -->
+<!-- ═══════════════════════════════════════ -->
+<section id="who">
+  <div class="container">
+    <div class="reveal in" style="text-align:center">
+      <h2 class="section-h2">למי מיועדת הסדנה?</h2>
+    </div>
+    <div class="who-grid">
+      <div class="who-chip reveal in">בתי ספר יסודיים</div>
+      <div class="who-chip reveal in">מתנסים ומרכזי קהילה</div>
+      <div class="who-chip reveal in">עיריות ורשויות מקומיות</div>
+      <div class="who-chip reveal in">מועצות אזוריות</div>
+      <div class="who-chip reveal in">קייטנות</div>
+      <div class="who-chip reveal in">ערבי הורים</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- FAQ                                     -->
+<!-- ═══════════════════════════════════════ -->
+<section id="faq" class="warm">
+  <div class="container">
+    <div class="reveal in" style="text-align:center">
+      <h2 class="section-h2">שאלות נפוצות</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal in">
+        <p class="faq-q">כמה זמן נמשכת הסדנה?</p>
+        <p class="faq-a">סדנה חד-פעמית נמשכת כשעה. ניתן להזמין סדנה מתמשכת של מספר מפגשים, לבניית תהליך עמוק יותר עם התלמידים.</p>
+      </div>
+      <div class="faq-item reveal in">
+        <p class="faq-q">לכמה תלמידים בסדנה?</p>
+        <p class="faq-a">גמיש. אפשר כיתה אחת, שכבה שלמה, ואפילו כל בית הספר.</p>
+      </div>
+      <div class="faq-item reveal in">
+        <p class="faq-q">לאיזה גילאים הסדנה מתאימה?</p>
+        <p class="faq-a">התכנים, הדוגמאות והשפה מותאמים לגילאי בית ספר יסודי, בעיקר לכיתות ג׳–ו׳.</p>
+      </div>
+      <div class="faq-item reveal in">
+        <p class="faq-q">האם ניתן לממן דרך תקציב גפן?</p>
+        <p class="faq-a">כן. הסדנה מאושרת למימון דרך תקציב גפן.</p>
+      </div>
+      <div class="faq-item reveal in">
+        <p class="faq-q">מה ההבדל מהרצאה רגילה?</p>
+        <p class="faq-a">הסדנה לא מטיפה ולא מאיימת — היא חוויתית ומדברת עם הילדים בגובה העיניים, בשפה ובדוגמאות שהם מכירים מהחיים שלהם. ופותחת להם את העיניים בחכמה על מה שקורה מאחורי הקלעים ברשתות החברתיות, ואיך הן משפיעות עלינו (לטוב, ולפחות טוב).</p>
+      </div>
+      <div class="faq-item reveal in">
+        <p class="faq-q">האם אפשר לקבל סדנה גם להורים או לצוות המורים?</p>
+        <p class="faq-a">בוודאי. ניתן להזמין סדנה להורים או לצוות החינוכי, שנותנת להם כלים להמשיך את השיחה בבית ובכיתה.</p>
       </div>
     </div>
   </div>
