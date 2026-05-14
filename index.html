@@ -62,6 +62,64 @@
   }
   </script>
 
+  <!-- FAQPage Schema — מציג שאלות ותשובות ישירות בגוגל -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "כמה זמן נמשכת סדנת ילדים ברשת?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "סדנה חד-פעמית נמשכת כשעה. ניתן להזמין סדנה מתמשכת של מספר מפגשים, לבניית תהליך עמוק יותר עם התלמידים."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "לכמה תלמידים מתאימה הסדנה?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "גמיש. אפשר כיתה אחת, שכבה שלמה, ואפילו כל בית הספר."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "לאיזה גילאים מתאימה סדנת ילדים ברשת?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "התכנים, הדוגמאות והשפה מותאמים לגילאי בית ספר יסודי, בעיקר לכיתות ג׳–ו׳."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "האם ניתן לממן את הסדנה דרך תקציב גפן?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "כן. הסדנה מאושרת למימון דרך תקציב גפן."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "מה ההבדל בין סדנת ילדים ברשת להרצאה רגילה?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "הסדנה לא מטיפה ולא מאיימת — היא חוויתית ומדברת עם הילדים בגובה העיניים, בשפה ובדוגמאות שהם מכירים מהחיים שלהם. היא פותחת להם את העיניים על מה שקורה מאחורי הקלעים ברשתות החברתיות, ואיך הן משפיעות עלינו."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "האם אפשר להזמין סדנה גם להורים או לצוות המורים?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "בוודאי. ניתן להזמין סדנה להורים או לצוות החינוכי, שנותנת להם כלים להמשיך את השיחה בבית ובכיתה."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="icon" type="image/png" href="images/yagel-headshot.PNG">
   <link rel="apple-touch-icon" href="images/yagel-headshot.PNG">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1590,14 +1648,14 @@
     <div class="reveal in" style="text-align:center">
       <h2 class="section-h2">למי מיועדת הסדנה?</h2>
     </div>
-    <div class="who-grid">
-      <div class="who-chip reveal in">בתי ספר יסודיים</div>
-      <div class="who-chip reveal in">מתנסים ומרכזי קהילה</div>
-      <div class="who-chip reveal in">עיריות ורשויות מקומיות</div>
-      <div class="who-chip reveal in">מועצות אזוריות</div>
-      <div class="who-chip reveal in">קייטנות</div>
-      <div class="who-chip reveal in">ערבי הורים</div>
-    </div>
+    <ul class="who-grid" aria-label="קהלי יעד לסדנת ילדים ברשת" style="list-style:none;padding:0">
+      <li class="who-chip reveal in">בתי ספר יסודיים</li>
+      <li class="who-chip reveal in">מתנסים ומרכזי קהילה</li>
+      <li class="who-chip reveal in">עיריות ורשויות מקומיות</li>
+      <li class="who-chip reveal in">מועצות אזוריות</li>
+      <li class="who-chip reveal in">קייטנות</li>
+      <li class="who-chip reveal in">ערבי הורים</li>
+    </ul>
   </div>
 </section>
 
