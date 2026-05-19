@@ -631,6 +631,52 @@
       .method-features { position: static; }
     }
 
+    /* ── LOGISTICS ── */
+    #logistics { background: var(--bg); padding-block: 80px; }
+    .logistics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 48px auto 0;
+    }
+    .logistics-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .logistics-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,.07); transform: translateY(-2px); }
+    .logistics-icon {
+      width: 56px; height: 56px;
+      margin: 0 auto 18px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--blue), #6B4EFF);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .logistics-icon svg { width: 26px; height: 26px; stroke: var(--white); stroke-width: 2; fill: none; }
+    .logistics-label {
+      font-size: 13px; font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-bottom: 8px;
+    }
+    .logistics-value {
+      font-size: 22px; font-weight: 800;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .logistics-detail {
+      font-size: 14px; color: var(--text-mid);
+      line-height: 1.55;
+    }
+    @media (max-width: 860px) {
+      .logistics-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── ABOUT ── */
     #about { background: var(--bg); }
     .about-layout {
@@ -1571,6 +1617,45 @@
             כוללת חומרים לצוות החינוכי
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- LOGISTICS — WHAT YOU GET                -->
+<!-- ═══════════════════════════════════════ -->
+<section id="logistics">
+  <div class="container">
+    <div class="reveal in" style="text-align:center">
+      <div class="section-divider" style="margin-inline:auto"></div>
+      <h2 class="section-h2">מה מקבלים בפועל.</h2>
+      <p class="section-lead" style="margin-inline:auto">סדנה מובנית, ברורה, מותאמת לבית הספר שלכם.</p>
+    </div>
+    <div class="logistics-grid">
+      <div class="logistics-card reveal in">
+        <div class="logistics-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="logistics-label">משך</div>
+        <div class="logistics-value">כ-60 דקות</div>
+        <p class="logistics-detail">סדנה חד-פעמית, אפשר גם תהליך מתמשך של מספר מפגשים.</p>
+      </div>
+      <div class="logistics-card reveal reveal-delay-1 in">
+        <div class="logistics-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="logistics-label">קהל</div>
+        <div class="logistics-value">כיתה · שכבה · בית ספר</div>
+        <p class="logistics-detail">גמיש לכל גודל. ניתן גם להורים ולצוות החינוכי.</p>
+      </div>
+      <div class="logistics-card reveal reveal-delay-2 in">
+        <div class="logistics-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div class="logistics-label">כולל</div>
+        <div class="logistics-value">תוכן + כלים + ליווי</div>
+        <p class="logistics-detail">שיחה אמיתית, דוגמאות מהעולם של הילדים, כלים מעשיים וחומר הכנה לצוות.</p>
       </div>
     </div>
   </div>
