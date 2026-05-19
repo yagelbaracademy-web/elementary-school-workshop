@@ -1013,6 +1013,35 @@
       max-width: 560px; margin: 0 auto 28px;
     }
 
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+    }
+    .trust-bar-inner {
+      max-width: var(--max-wide); margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      flex-wrap: wrap; gap: 28px;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 14px; font-weight: 600; color: var(--text-mid);
+    }
+    .trust-check {
+      flex-shrink: 0;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: rgba(0,102,255,.1);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .trust-check svg { width: 11px; height: 11px; stroke: var(--blue); stroke-width: 3; }
+    @media (max-width: 860px) {
+      .trust-bar-inner { gap: 14px; }
+      .trust-item { font-size: 13px; }
+    }
+
     /* ── STATS RIBBON ── */
     .stats-ribbon {
       background: var(--text);
@@ -1197,6 +1226,28 @@
   </div>
 </section>
 
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <span class="trust-check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      הוזמנה ע"י בתי ספר ועיריות
+    </div>
+    <div class="trust-item">
+      <span class="trust-check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      מאושרת למימון גפן
+    </div>
+    <div class="trust-item">
+      <span class="trust-check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      מותאמת לכיתות ג׳–ו׳
+    </div>
+    <div class="trust-item">
+      <span class="trust-check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      סדנה חווייתית של כ-60 דקות
+    </div>
+  </div>
+</div>
+
 <!-- STATS RIBBON -->
 <div class="stats-ribbon">
   <div class="stats-ribbon-inner">
@@ -1262,30 +1313,9 @@
         <h3>פרסום סמוי ומניפולציה</h3>
         <p>"היוטיובר האהוב אמר שהמוצר הזה מדהים." ילדים לא מזהים שזה פרסומת. הם פשוט רוצים לקנות.</p>
       </div>
-      <div class="reality-card c5 reveal in">
-        <div class="reality-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#EC4899" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path></svg>
-        </div>
-        <h3>השפעה על דימוי עצמי</h3>
-        <p>כמה לייקים קיבלתי? למה לאחרת יש יותר תגובות? הרשת הפכה לאמצעי מדידה של ערך עצמי — במיוחד בגילאי בית ספר יסודי.</p>
-      </div>
-      <div class="reality-card c6 reveal reveal-delay-1 in">
-        <div class="reality-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-        </div>
-        <h3>טרנדים מסוכנים</h3>
-        <p>אתגרי רשת שנראים כיף — ויכולים להיות מסוכנים. ילדים מצטרפים בגלל לחץ חברתי, בלי להבין את הסיכון.</p>
-      </div>
     </div>
   </div>
 </section>
-
-<!-- PULL QUOTE 1 -->
-<div class="pull-quote reveal in" style="padding-top:44px">
-  <div class="pull-quote-mark">"</div>
-  <p class="pull-quote-text">אוריינות דיגיטלית היא לא רק לדעת להשתמש בטכנולוגיה —<br><em>אלא להבין אותה, לשאול שאלות ולהשתמש בה באחריות.</em></p>
-  <div class="pull-quote-source">— מייק ריבל, חוקר ומרצה בתחום האזרחות הדיגיטלית</div>
-</div>
 
 <!-- ═══════════════════════════════════════ -->
 <!-- CHAPTER 2 — WHY THE USUAL DOESN'T WORK -->
