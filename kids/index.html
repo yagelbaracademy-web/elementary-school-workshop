@@ -587,15 +587,18 @@
       align-items: start;
     }
     .method-num {
-      width: 60px; height: 60px;
+      width: 56px; height: 56px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--blue), #6B4EFF);
-      color: var(--white);
+      background: linear-gradient(135deg, #0066FF, #6B4EFF);
+      color: #ffffff;
       display: flex; align-items: center; justify-content: center;
-      font-size: 26px; font-weight: 900;
+      font-size: 24px; font-weight: 900;
       flex-shrink: 0;
-      box-shadow: 0 8px 22px rgba(0,102,255,.28);
+      box-shadow: 0 10px 26px rgba(0,102,255,.35);
       line-height: 1;
+      border: 3px solid #fff;
+      outline: 2px solid rgba(0,102,255,.15);
+      outline-offset: 0;
     }
     .method-step h3 { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 8px; margin-top: 8px; }
     .method-step p { font-size: 15px; color: var(--text-mid); line-height: 1.65; }
@@ -618,13 +621,15 @@
     }
     .method-feature-check {
       flex-shrink: 0;
-      width: 22px; height: 22px;
+      width: 18px; height: 18px;
       border-radius: 50%;
-      background: var(--blue);
+      background: #10B981;
       display: flex; align-items: center; justify-content: center;
     }
     .method-feature-check svg {
-      width: 13px; height: 13px;
+      width: 11px; height: 11px;
+    }
+    .method-feature-check svg polyline {
       fill: none; stroke: #fff; stroke-width: 3.5;
       stroke-linecap: round; stroke-linejoin: round;
     }
