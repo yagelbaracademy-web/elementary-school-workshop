@@ -583,23 +583,25 @@
       gap: 48px;
       align-items: start;
     }
-    .method-steps { display: flex; flex-direction: column; gap: 20px; }
+    .method-steps { display: flex; flex-direction: column; gap: 28px; }
     .method-step {
       display: grid;
-      grid-template-columns: 48px 1fr;
-      gap: 18px;
+      grid-template-columns: 68px 1fr;
+      gap: 22px;
       align-items: start;
     }
     .method-num {
-      width: 44px; height: 44px;
+      width: 60px; height: 60px;
       border-radius: 50%;
-      background: var(--blue);
+      background: linear-gradient(135deg, var(--blue), #6B4EFF);
       color: var(--white);
       display: flex; align-items: center; justify-content: center;
-      font-size: 16px; font-weight: 900;
+      font-size: 26px; font-weight: 900;
       flex-shrink: 0;
+      box-shadow: 0 8px 22px rgba(0,102,255,.28);
+      line-height: 1;
     }
-    .method-step h3 { font-size: 17px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+    .method-step h3 { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 8px; margin-top: 8px; }
     .method-step p { font-size: 15px; color: var(--text-mid); line-height: 1.65; }
     .method-features {
       background: var(--white);
@@ -616,19 +618,25 @@
     .method-feature-list { display: flex; flex-direction: column; gap: 12px; }
     .method-feature-item {
       display: flex; align-items: center; gap: 10px;
-      font-size: 14px; color: var(--text-mid); font-weight: 500;
+      font-size: 14px; color: var(--text); font-weight: 500;
     }
     .method-feature-check {
       flex-shrink: 0;
-      width: 18px; height: 18px;
+      width: 22px; height: 22px;
       border-radius: 50%;
-      background: rgba(0,102,255,.1);
+      background: var(--blue);
       display: flex; align-items: center; justify-content: center;
     }
-    .method-feature-check svg { width: 11px; height: 11px; stroke: var(--blue); stroke-width: 3; }
+    .method-feature-check svg {
+      width: 13px; height: 13px;
+      fill: none; stroke: #fff; stroke-width: 3.5;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
     @media (max-width: 860px) {
       .method-layout { grid-template-columns: 1fr; }
       .method-features { position: static; }
+      .method-num { width: 52px; height: 52px; font-size: 22px; }
+      .method-step { grid-template-columns: 60px 1fr; }
     }
 
     /* ── LOGISTICS ── */
@@ -1570,9 +1578,9 @@
         <div class="module-num">1</div>
         <div>
           <h3>איך תוכן משפיע עלינו</h3>
-          <p>ילדים חושבים שהם בוחרים מה לראות. בפועל, אלגוריתם בוחר עבורם. בסדנה הם רואים מה קורה מאחורי הקלעים של כל סרטון, לייק וגלילה — ומקבלים את הכלים להחזיר לעצמם את השליטה.</p>
+          <p>כל סרטון, פוסט וטרנד מתוכננים בקפידה. יוצרי תוכן משתמשים בטכניקות מתוחכמות כדי לתפוס תשומת לב, ליצור התמכרות ולמכור — והילדים לא רואים את זה. בסדנה הם נחשפים לטכניקות מאחורי הקלעים, ומקבלים את הכלים לזהות אותן ולשלוט במה שהם צורכים.</p>
           <div class="module-tags">
-            <span class="module-tag">אלגוריתמים</span>
+            <span class="module-tag">טכניקות יוצרי תוכן</span>
             <span class="module-tag">פרסום סמוי</span>
             <span class="module-tag">התמכרות למסך</span>
             <span class="module-tag">משפיענים</span>
