@@ -300,18 +300,14 @@
       position: relative;
       display: inline;
       color: var(--orange);
+      background-image: linear-gradient(var(--orange), var(--orange));
+      background-repeat: no-repeat;
+      background-size: 0% 3px;
+      background-position: 0 88%;
+      animation: drawUnderlineBg 0.9s cubic-bezier(.4,0,.2,1) 0.6s forwards;
     }
-    .hero-h1 .underline::after {
-      content: '';
-      position: absolute;
-      bottom: -3px; right: 0; left: 0;
-      height: 3px;
-      background: var(--orange);
-      border-radius: 2px;
-      z-index: 1;
-      transform: scaleX(0);
-      transform-origin: right;
-      animation: drawUnderline 0.9s cubic-bezier(.4,0,.2,1) 0.6s forwards;
+    @keyframes drawUnderlineBg {
+      to { background-size: 100% 3px; }
     }
     @keyframes drawUnderline {
       to { transform: scaleX(1); }
@@ -1395,7 +1391,7 @@
       <div class="hero-eyebrow"><span class="workshop-pill">סדנת "ילדים ברשת"</span></div>
       <h1 class="hero-h1">
         הילדים מבלים שעות ברשת.
-        <span style="color:var(--orange)">האם יש להם <span class="underline">כלים להתמודד</span> עם מה שקורה שם?</span>
+        <span style="color:var(--orange)">האם יש להם <span class="underline">כלים להתמודד עם מה שקורה שם?</span></span>
       </h1>
       <p class="hero-lead">
         סדנה חווייתית לתלמידי יסודי על הפסיכולוגיה שמאחורי הרשתות החברתיות, לחץ חברתי, אלימות ברשת וחשיבה ביקורתית.<br>
@@ -1846,7 +1842,7 @@
         </div>
         <div class="logistics-label">משך</div>
         <div class="logistics-value">כ-60 דקות</div>
-        <p class="logistics-detail">סדנה חד-פעמית. <strong>גם תהליך מתמשך</strong> של כמה מפגשים — לבניית עומק עם התלמידים.</p>
+        <p class="logistics-detail">סדנה חד-פעמית, או <strong>סדרה של מספר מפגשים</strong> לעבודת עומק.</p>
       </div>
       <div class="logistics-card reveal reveal-delay-1 in">
         <div class="logistics-icon">
