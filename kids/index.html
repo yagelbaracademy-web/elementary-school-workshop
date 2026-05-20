@@ -1120,27 +1120,31 @@
       background: var(--bg);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: 18px 24px;
+      padding: 22px 24px;
     }
     .trust-bar-inner {
       max-width: var(--max-wide); margin: 0 auto;
       display: flex; align-items: center; justify-content: center;
-      flex-wrap: wrap; gap: 28px;
+      flex-wrap: wrap; gap: 32px;
     }
     .trust-item {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 14px; font-weight: 600; color: var(--text-mid);
+      display: flex; align-items: center; gap: 10px;
+      font-size: 14px; font-weight: 600; color: var(--text);
     }
     .trust-check {
       flex-shrink: 0;
-      width: 18px; height: 18px;
+      width: 22px; height: 22px;
       border-radius: 50%;
-      background: rgba(0,102,255,.1);
+      background: var(--blue);
       display: flex; align-items: center; justify-content: center;
     }
-    .trust-check svg { width: 11px; height: 11px; stroke: var(--blue); stroke-width: 3; }
+    .trust-check svg {
+      width: 13px; height: 13px;
+      fill: none; stroke: #fff; stroke-width: 3.5;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
     @media (max-width: 860px) {
-      .trust-bar-inner { gap: 14px; }
+      .trust-bar-inner { gap: 16px; }
       .trust-item { font-size: 13px; }
     }
 
@@ -1332,19 +1336,19 @@
 <div class="trust-bar">
   <div class="trust-bar-inner">
     <div class="trust-item">
-      <span class="trust-check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-      הוזמנה ע"י בתי ספר ועיריות
+      <span class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+      מומלצת ע"י בתי ספר ועיריות
     </div>
     <div class="trust-item">
-      <span class="trust-check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      <span class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
       מאושרת למימון גפן
     </div>
     <div class="trust-item">
-      <span class="trust-check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      <span class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
       מותאמת לכיתות ג׳–ו׳
     </div>
     <div class="trust-item">
-      <span class="trust-check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      <span class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
       סדנה חווייתית של כ-60 דקות
     </div>
   </div>
