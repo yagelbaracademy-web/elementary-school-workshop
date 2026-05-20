@@ -644,43 +644,60 @@
     .logistics-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 24px;
       max-width: 1000px;
       margin: 48px auto 0;
     }
     .logistics-card {
+      position: relative;
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 32px 24px;
+      padding: 36px 26px;
       text-align: center;
-      transition: box-shadow .2s, transform .2s;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 6px;
+      transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+      overflow: hidden;
     }
-    .logistics-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,.07); transform: translateY(-2px); }
+    .logistics-card::before {
+      content: "";
+      position: absolute; inset: 0 0 auto 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue), #6B4EFF);
+      transform: scaleX(0); transform-origin: right;
+      transition: transform .35s ease;
+    }
+    .logistics-card:hover { box-shadow: 0 18px 42px rgba(0,0,0,.09); transform: translateY(-4px); border-color: rgba(0,102,255,.25); }
+    .logistics-card:hover::before { transform: scaleX(1); transform-origin: left; }
     .logistics-icon {
-      width: 56px; height: 56px;
+      width: 64px; height: 64px;
       margin: 0 auto 18px;
-      border-radius: 16px;
+      border-radius: 18px;
       background: linear-gradient(135deg, var(--blue), #6B4EFF);
       display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 10px 24px rgba(0,102,255,.28);
     }
-    .logistics-icon svg { width: 26px; height: 26px; stroke: var(--white); stroke-width: 2; fill: none; }
+    .logistics-icon svg { width: 30px; height: 30px; stroke: var(--white); stroke-width: 2; fill: none; }
     .logistics-label {
-      font-size: 13px; font-weight: 700;
+      font-size: 12px; font-weight: 800;
       color: var(--blue);
-      text-transform: uppercase; letter-spacing: .08em;
-      margin-bottom: 8px;
+      text-transform: uppercase; letter-spacing: .12em;
+      margin-bottom: 10px;
     }
     .logistics-value {
-      font-size: 22px; font-weight: 800;
+      font-size: 22px; font-weight: 900;
       color: var(--text);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       line-height: 1.25;
+      letter-spacing: -.01em;
     }
     .logistics-detail {
       font-size: 14px; color: var(--text-mid);
-      line-height: 1.55;
+      line-height: 1.65;
+      max-width: 240px;
     }
+    .logistics-detail strong { color: var(--text); font-weight: 700; }
     @media (max-width: 860px) {
       .logistics-grid { grid-template-columns: 1fr; }
     }
@@ -1782,7 +1799,7 @@
         </div>
         <div class="logistics-label">משך</div>
         <div class="logistics-value">כ-60 דקות</div>
-        <p class="logistics-detail">סדנה חד-פעמית, אפשר גם תהליך מתמשך של מספר מפגשים.</p>
+        <p class="logistics-detail">סדנה חד-פעמית. <strong>גם תהליך מתמשך</strong> של כמה מפגשים — לבניית עומק עם התלמידים.</p>
       </div>
       <div class="logistics-card reveal reveal-delay-1 in">
         <div class="logistics-icon">
