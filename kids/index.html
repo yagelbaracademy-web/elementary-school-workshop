@@ -796,6 +796,23 @@
     }
     .lezichram-stat-num span { color: var(--orange); }
     .lezichram-stat p { font-size: 14px; color: rgba(255,255,255,.5); margin-top: 6px; margin-bottom: 0; }
+    .media-logos { margin-top: 28px; }
+    .media-logos-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(255,255,255,.3);
+      margin-bottom: 14px;
+    }
+    .media-logos-row {
+      display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+    }
+    .media-logo {
+      height: 22px; width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      opacity: 0.5;
+      transition: opacity .2s;
+    }
+    .media-logo:hover { opacity: 0.8; }
     .lezichram-image { position: relative; }
     .lezichram-img-card {
       border-radius: var(--radius-lg);
@@ -1454,7 +1471,7 @@
           <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
         <h3>מעצימה ומכבדת</h3>
-        <p>הילדים יוצאים עם תחושת מסוגלות וכלים מעשיים, מבוססים על עקרונות DBT שלמדתי במכללה האקדמית יפו. שיחה שמאמינה שהם יכולים לבחור ולנווט ברשת בחכמה.</p>
+        <p>הסדנה מדברת עם הילדים, לא מעליהם. הם יוצאים עם תחושה שהם יכולים לבחור — ושהבחירות שלהם ברשת באמת משנות.</p>
       </div>
     </div>
   </div>
@@ -1497,7 +1514,7 @@
         <div class="cred-item"><div class="cred-dot"></div> בוגר הטכניון</div>
         <div class="cred-item"><div class="cred-dot"></div> בוגר קורס DBT — המכללה האקדמית יפו</div>
         <div class="cred-item"><div class="cred-dot"></div> מייסד "לזכרם" — 140 מיליון צפיות באינסטגרם</div>
-        <div class="cred-item"><div class="cred-dot"></div> ראיון על מיזם "לזכרם" בערוץ i24 NEWS</div>
+
         <div class="cred-item"><div class="cred-dot"></div> מנחה סדנאות בבתי ספר יסודי, חטיבה ותיכון</div>
       </div>
     </div>
@@ -1534,10 +1551,18 @@
         <div class="lezichram-stat-num">140<span>M</span></div>
         <p>צפיות באינסטגרם · 20,000+ נופלים מונצחים · מיזם לאומי</p>
       </div>
+      <div class="media-logos">
+        <p class="media-logos-label">סיקרו את המיזם</p>
+        <div class="media-logos-row">
+          <img src="images/logo-ynet.gif" alt="ynet" class="media-logo">
+          <img src="images/logo-mako.png" alt="mako" class="media-logo">
+          <img src="images/logo-ice.png" alt="ice" class="media-logo">
+        </div>
+      </div>
     </div>
     <div class="lezichram-image reveal reveal-delay-1 in">
       <div class="lezichram-img-card">
-        <img src="images/yagel-lecture.jpg" alt="יגל בר מרצה בסדנת ילדים ברשת בפני קהל">
+        <img src="images/yagel-lezichram.jpg" alt="יגל בר מרצה על מיזם לזכרם">
       </div>
       <div class="insta-float insta-float-1" onclick="openLightbox('images/lezichram post screenshot.jpg')">
         <div class="insta-card">
@@ -1567,8 +1592,8 @@
       </p>
     </div>
     <div class="video-wrap reveal in">
-      <video id="mainVideo" preload="metadata">
-        <source src="images/i24-interview.mov" type="video/mp4">
+      <video id="mainVideo" preload="metadata" poster="images/yagel-lezichram.jpg">
+        <source src="images/i24-interview.mp4" type="video/mp4">
       </video>
       <button class="video-play-btn" id="playBtn" aria-label="הפעל וידאו">
         <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
