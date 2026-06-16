@@ -328,7 +328,7 @@
     /* DIVIDER */
     .section-divider {
       width: 48px; height: 3px;
-      background: var(--orange);
+      background: var(--text);
       border-radius: 2px;
       margin-bottom: 28px;
     }
@@ -396,7 +396,7 @@
     }
     .intro-mark {
       width: 44px; height: 4px;
-      background: var(--orange);
+      background: var(--accent);
       border-radius: 4px;
       margin: 0 auto 24px;
     }
@@ -411,7 +411,6 @@
     .intro-text-col strong {
       color: var(--text);
       font-weight: 800;
-      background: linear-gradient(transparent 60%, rgba(234,88,12,.15) 60%);
     }
     .intro-cards-col {
       display: grid;
@@ -768,7 +767,7 @@
     .cred-dot {
       width: 6px; height: 6px;
       border-radius: 50%;
-      background: var(--orange);
+      background: var(--accent);
       flex-shrink: 0;
     }
 
@@ -777,6 +776,7 @@
     .lezichram-inner {
       max-width: var(--max-wide); margin: 0 auto;
       display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+      overflow: visible;
     }
     .lezichram-content .chapter-label { color: rgba(255,255,255,.4); }
     .lezichram-content .chapter-label span { background: rgba(255,255,255,.3); }
@@ -806,14 +806,14 @@
       display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
     }
     .media-logo {
-      height: 22px; width: auto;
+      height: 34px; width: auto;
       object-fit: contain;
-      filter: brightness(0) invert(1);
-      opacity: 0.5;
+      opacity: 0.85;
       transition: opacity .2s;
     }
-    .media-logo:hover { opacity: 0.8; }
-    .lezichram-image { position: relative; }
+    .media-logo:hover { opacity: 1; }
+    .media-logo-mako { filter: drop-shadow(0 0 6px rgba(0,0,0,.7)) drop-shadow(0 1px 3px rgba(0,0,0,.9)); }
+    .lezichram-image { position: relative; overflow: visible; }
     .lezichram-img-card {
       border-radius: var(--radius-lg);
       overflow: hidden;
@@ -836,8 +836,8 @@
       position: absolute; width: 44%;
       transition: transform 0.25s; cursor: pointer;
     }
-    .insta-float-1 { bottom: 20px; left: -14px; transform: rotate(-3deg); z-index: 2; }
-    .insta-float-2 { bottom: 8px; left: 18%; transform: rotate(2deg); z-index: 1; }
+    .insta-float-1 { bottom: 20px; left: -26%; transform: rotate(-3deg); z-index: 2; }
+    .insta-float-2 { bottom: 8px; left: -6%; transform: rotate(2deg); z-index: 1; }
     .insta-float-1:hover { transform: scale(1.05) rotate(-1deg); z-index: 4; }
     .insta-float-2:hover { transform: scale(1.05) rotate(0.5deg); z-index: 4; }
     .insta-row-mobile { display: none; gap: 10px; margin: 14px 0 20px; }
@@ -1092,15 +1092,16 @@
   <div class="hero-inner">
     <div class="hero-text reveal in">
       <div class="hero-eyebrow">
-        <span class="workshop-pill">סדנה לתלמידי יסודי · "ילדים ברשת"</span>
+        <span class="chapter-label" style="margin-bottom:0">
+          <span></span>סדנה לתלמידי יסודי · "ילדים ברשת"<span></span>
+        </span>
       </div>
       <h1 class="hero-h1">
         הילדים מבלים שעות ברשת.
         <span style="color:var(--orange)">האם יש להם <span class="underline">כלים להתמודד עם מה שקורה שם?</span></span>
       </h1>
       <p class="hero-lead">
-        סדנה חווייתית לתלמידי יסודי על הפסיכולוגיה שמאחורי הרשתות החברתיות, לחץ חברתי, אלימות ברשת וחשיבה ביקורתית.<br>
-        <strong>בשפה שלהם. בגובה העיניים.</strong>
+        סדנה חווייתית לתלמידי יסודי על הפסיכולוגיה שמאחורי הרשתות החברתיות, לחץ חברתי, בריונות ברשת וחשיבה ביקורתית.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">בדקו התאמה לבית הספר שלכם</a>
@@ -1110,7 +1111,12 @@
         </a>
       </div>
     </div>
-    <div class="hero-image-col reveal reveal-delay-1 in">
+    <div class="hero-image-col reveal reveal-delay-1 in" style="position:relative;overflow:visible">
+      <img src="images/yagel-hero-cutout.png" alt="יגל בר מרצה"
+        style="position:absolute;bottom:0;left:-38%;
+               height:115%;width:auto;max-width:none;object-fit:contain;
+               transform:scaleX(-1);bottom:-8%;
+               pointer-events:none;z-index:3">
       <div class="hero-img-wrap">
         <img src="images/hero-kids.png" alt="ילדים גולשים ברשת" class="hero-img-blob">
         <div class="gapan-badge">
@@ -1132,19 +1138,19 @@
   <div class="trust-bar-inner">
     <div class="trust-item">
       <span class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-      מומלצת ע"י בתי ספר
-    </div>
-    <div class="trust-item">
-      <span class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
       מאושרת למימון גפן
     </div>
     <div class="trust-item">
       <span class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-      מותאמת לכיתות ג׳–ו׳
+      מותאמת לכיתות ג׳-ו׳
     </div>
     <div class="trust-item">
       <span class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
       סדנה חווייתית של כ-60 דקות
+    </div>
+    <div class="trust-item">
+      <span class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+      אפשרות לסדנה להורים ולצוות החינוכי
     </div>
   </div>
 </div>
@@ -1156,8 +1162,8 @@
   <div class="intro-inner">
     <div class="intro-text-col reveal in">
       <div class="intro-mark"></div>
-      <p>כל מי שעובד עם ילדים רואה את זה — חרמות בצ'אט שצצות פתאום, ילד שהיה מדבר ופתאום שותק, לחץ חברתי שמגיע לכיתה ממקום שלא רואים. אתם דואגים, אתם רוצים לעזור — אבל העולם הזה השתנה כל כך מהר, שקשה לדעת מאיפה לפתוח את השיחה.</p>
-      <p>הילדים חיים בצ'אטים, במשחקי מחשב וברשתות חברתיות. הם נתקלים בבריונות, לחץ ומניפולציה — <strong>ולא תמיד מספרים</strong>. הם צריכים כלים שיעזרו להם להתמודד, ממי שחי את העולם הזה, יודע איך הוא עובד, ומדבר איתם בגובה העיניים.</p>
+      <p>כל מי שעובד עם ילדים רואה את זה - חרמות, ילד שמתמודדים עם בריונות, לחץ חברתי שמגיע לכיתה ממקום שלא רואים. אתם דואגים, אתם רוצים לעזור - אבל העולם הזה השתנה כל כך מהר, שקשה לדעת מאיפה לפתוח את השיחה.</p>
+      <p>הילדים חיים בצ'אטים, במשחקי מחשב וברשתות חברתיות. הם נתקלים בבריונות, לחץ ומניפולציה — ולא תמיד מספרים. הם צריכים כלים שיעזרו להם להתמודד, ממי שחי את העולם הזה, יודע איך הוא עובד, ומדבר איתם בגובה העיניים.</p>
     </div>
     <div class="intro-cards-col">
       <div class="ov-card reveal reveal-delay-1 in">
@@ -1168,10 +1174,11 @@
           <div class="ov-title">נושאי הסדנה</div>
         </div>
         <ul class="ov-list">
-          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>אלימות ברשת, שיימינג וחרמות דיגיטליים</li>
-          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>טכניקות יוצרי תוכן ופסיכולוגיה של גלילה</li>
-          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>משפיענים, פרסום סמוי וטרנדים ויראליים</li>
-          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>בטיחות, פרטיות והשפעה חיובית ברשת</li>
+          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>אלימות ברשת, שיימינג ולחץ חברתי בעולם הדיגיטלי</li>
+          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>איך רשתות חברתיות באמת עובדות — אלגוריתמים, מנגנוני השפעה וכלים למשיכת תשומת לב</li>
+          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>משפיענים, טרנדים ויראליים ופרסום סמוי — איך לזהות מה מנסים למכור לנו</li>
+          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>תקשורת מכבדת בצ'אטים, במשחקים וברשתות החברתיות</li>
+          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>איך לזהות טרנד חיובי לעומת טרנד שעלול לסכן או לפגוע</li>
         </ul>
       </div>
       <div class="ov-card reveal reveal-delay-2 in">
@@ -1179,13 +1186,15 @@
           <div class="ov-icon">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
           </div>
-          <div class="ov-title">מטרות הסדנה</div>
+          <div class="ov-title">מה הילדים ילמדו?</div>
         </div>
         <ul class="ov-list">
-          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>להבין איך הרשתות החברתיות עובדות באמת</li>
-          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>לזהות מניפולציה, פרסום סמוי ולחץ חברתי</li>
-          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>לפתח חשיבה ביקורתית כלפי תוכן דיגיטלי</li>
-          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>לחזק תחושת מסוגלות ושייכות חברתית</li>
+          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>לזהות מתי מנסים להשפיע עליהם ברשת</li>
+          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>להבדיל בין טרנד חיובי לטרנד מסוכן</li>
+          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>להתמודד עם שיימינג, לחץ חברתי ובריונות ברשת</li>
+          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>למה קשה להפסיק לגלול — ואיך לפעול לפי שיקול דעת</li>
+          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>לשמור על פרטיות ובטיחות ברשת</li>
+          <li class="ov-item"><span class="ov-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>להשתמש ברשתות בצורה חכמה, מכבדת ומקדמת</li>
         </ul>
       </div>
     </div>
@@ -1200,14 +1209,14 @@
     <div class="reveal in">
       <div class="section-divider"></div>
       <h2 class="section-h2">מה הילדים לומדים<br>בסדנה.</h2>
-      <p class="section-lead">שלושה צירים שמכסים את מה שילדים פוגשים ברשת כל יום — איך תוכן עובד, איך אנשים מתנהגים, ואיך בוחרים לפעול.</p>
+      <p class="section-lead">שלושה צירים שמכסים את מה שילדים פוגשים ברשת כל יום: איך תוכן עובד ולמה הוא מושך, איך נוצרים לחץ ופגיעה חברתית, ואיך מקבלים החלטות טובות יותר.</p>
     </div>
     <div class="workshop-modules">
       <div class="module reveal in">
         <div class="module-num">1</div>
         <div>
           <h3>איך תוכן משפיע עלינו</h3>
-          <p>כל סרטון וטרנד מתוכננים בקפידה — יוצרי תוכן משתמשים בטכניקות מתוחכמות כדי לתפוס תשומת לב. בסדנה הילדים נחשפים אליהן ומקבלים כלים לזהות ולשלוט במה שהם צורכים.</p>
+          <p>מאחורי כל סרטון, טרנד ואפליקציה יש פסיכולוגיה מחושבת. אלגוריתמים שיודעים מה יגרום לנו לגלול, לשתף ולהישאר. בסדנה הילדים מבינים איך זה עובד מאחורי הקלעים, מזהים את הטכניקות בזמן אמת, ומחליטים בעצמם מה לעשות עם זה.</p>
           <div class="module-tags">
             <span class="module-tag">טכניקות יוצרי תוכן</span>
             <span class="module-tag">פרסום סמוי</span>
@@ -1219,8 +1228,8 @@
       <div class="module reveal in">
         <div class="module-num">2</div>
         <div>
-          <h3>אלימות ברשת, חרמות ולחץ חברתי</h3>
-          <p>שיחה פתוחה על מה שקורה בצ'אטים, בקבוצות ובמשחקים. ילדים מבינים שלמילים ברשת יש משמעות אמיתית — ואיך עוזרים כשמישהו נפגע.</p>
+          <h3>בריונות ברשת, לחץ חברתי ופגיעה קבוצתית</h3>
+          <p>שיחה פתוחה על מה שקורה בצ'אטים, בקבוצות ובמשחקים. הילדים מבינים איך נוצר לחץ קבוצתי ברשת, מה עושים כשנפגעים, ואיך מגיבים כשהפגיעה מכוונת למישהו אחר.</p>
           <div class="module-tags">
             <span class="module-tag">חרמות</span>
             <span class="module-tag">שיימינג</span>
@@ -1232,8 +1241,8 @@
       <div class="module reveal in">
         <div class="module-num">3</div>
         <div>
-          <h3>לבחור להיות טובים — גם מאחורי המסך</h3>
-          <p>הילדים יוצאים עם תחושת מסוגלות: אני לא קורבן ולא תוקף — אני יכול לבחור. להשפיע לטובה. להשתמש ברשתות החברתיות כדי לעשות דברים שמשנים.</p>
+          <h3>לבחור להיות טובים, גם מאחורי המסך</h3>
+          <p>הילדים יוצאים עם הבנה שיש להם בחירה. גם כשיש לחץ, גם כשכולם עושים אחרת. ושהבחירות שלהם ברשת, גם הקטנות, עושות הבדל.</p>
           <div class="module-tags">
             <span class="module-tag">מסוגלות</span>
             <span class="module-tag">אחריות דיגיטלית</span>
@@ -1241,6 +1250,42 @@
             <span class="module-tag">חשיבה ביקורתית</span>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ -->
+<!-- WHAT MAKES IT SPECIAL         -->
+<!-- ══════════════════════════════ -->
+<section id="special">
+  <div class="container-wide">
+    <div class="reveal in" style="text-align:center">
+      <div class="section-divider" style="margin-inline:auto"></div>
+      <h2 class="section-h2">זו סדנה שונה<br>ממה שאתם מכירים.</h2>
+      <p class="section-lead" style="margin-inline:auto;max-width:700px">הסדנה צוללת לעולם הדיגיטלי שהילדים חיים בו - טרנדים, צ'אטים, משפיענים, משחקים וסרטונים - ומלמדת אותם להבין מה משפיע עליהם, לזהות לחץ ופגיעה, ולבחור נכון גם כשכולם עושים אחרת.</p>
+    </div>
+    <div class="special-grid">
+      <div class="special-card reveal in">
+        <div class="special-icon s1">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3>מבפנים של עולם הרשתות</h3>
+        <p>7+ שנות ניסיון ביצירת תכני הסברה, תכנים לעסקים, בלוגים ומיליוני צפיות במצטבר. הסדנה מגיעה ממי שחי את עולם הרשתות מבפנים - ויודע להסביר לילדים בדיוק איך הפסיכולוגיה ומנגנוני ההשפעה עובדים מאחורי הקלעים.</p>
+      </div>
+      <div class="special-card reveal reveal-delay-1 in">
+        <div class="special-icon s2">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3>בשפה שילדים מבינים</h3>
+        <p>דוגמאות מטרנדים שהם מכירים, סרטונים שראו השבוע, מימים שעוברים בכיתה. הסדנה היא שיחה - הם משתתפים, שואלים ומדברים.</p>
+      </div>
+      <div class="special-card reveal reveal-delay-2 in">
+        <div class="special-icon s3">
+          <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>מעצימה, לא מפחידה</h3>
+        <p>הגישה חיובית לחלוטין. הילדים יוצאים עם תחושה שיש להם בחירה, ושהבחירות שלהם ברשת - ביחס לאחרים ולעצמם - באמת משנות.</p>
       </div>
     </div>
   </div>
@@ -1268,7 +1313,7 @@
             <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
         </div>
-        <p class="tcard-quote">"תוכנית חשובה, רלוונטית ומעצימה — חושפת את התלמידים באופן חווייתי להשפעות הרגשיות והחברתיות של תכנים ברשתות. <strong>מומלצת מאוד לשילוב בבית הספר.</strong>"</p>
+        <p class="tcard-quote">"תוכנית חשובה, רלוונטית ומעצימה. חושפת את התלמידים באופן חווייתי להשפעות הרגשיות והחברתיות של תכנים ברשתות. <strong>מומלצת מאוד לשילוב בבית הספר.</strong>"</p>
         <div class="tcard-author">
           <div class="author-av av1">ל</div>
           <div>
@@ -1279,7 +1324,7 @@
       </div>
       <div class="tcard reveal reveal-delay-1 in">
         <div class="tcard-header">
-          <div class="tcard-org">אופק חינוכי — עיריית אלעד</div>
+          <div class="tcard-org">אופק חינוכי - עיריית אלעד</div>
           <div class="tcard-stars">
             <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1288,7 +1333,7 @@
             <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
         </div>
-        <p class="tcard-quote">"יגל <strong>מעצים את הילדים לחשוב באופן ביקורתי ויזמי</strong> — מחזק תחושת מסוגלות ושייכות, בשפה נגישה, מכבדת ומרתקת."</p>
+        <p class="tcard-quote">"יגל <strong>מעצים את הילדים לחשוב באופן ביקורתי ויזמי.</strong> מחזק תחושת מסוגלות ושייכות, בשפה נגישה, מכבדת ומרתקת."</p>
         <div class="tcard-author">
           <div class="author-av av2">ט</div>
           <div>
@@ -1299,7 +1344,7 @@
       </div>
       <div class="tcard reveal reveal-delay-2 in">
         <div class="tcard-header">
-          <div class="tcard-org">בית ספר אבני החושן — שוהם</div>
+          <div class="tcard-org">בית ספר אבני החושן - שוהם</div>
           <div class="tcard-stars">
             <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1322,83 +1367,13 @@
 </section>
 
 <!-- ══════════════════════════════ -->
-<!-- HOW THE WORKSHOP WORKS        -->
-<!-- ══════════════════════════════ -->
-<section id="methodology">
-  <div class="container">
-    <div class="reveal in">
-      <div class="section-divider"></div>
-      <h2 class="section-h2">איך הסדנה<br>עובדת בפועל.</h2>
-      <p class="section-lead">ארבעה שלבים שמובילים את הילדים מ"מה קורה ברשת?" ל"מה אני יכול לעשות עם זה?". כל שלב בנוי כך שהם השיחה עצמה — ולא קולטים בשתיקה.</p>
-    </div>
-    <div class="method-layout">
-      <div class="method-steps">
-        <div class="method-step reveal in">
-          <div class="method-num">1</div>
-          <div>
-            <h3>התחלה מהעולם של הילדים</h3>
-            <p>הסדנה פותחת עם תוכן שמוכר להם — טרנדים, מימים, סרטונים ויראליים. ככה יוצרים שיח אמיתי כבר מהדקה הראשונה.</p>
-          </div>
-        </div>
-        <div class="method-step reveal in">
-          <div class="method-num">2</div>
-          <div>
-            <h3>דיון פתוח ושיתוף</h3>
-            <p>הילדים מביעים דעות, מספרים מניסיונם ושואלים שאלות. כי שיחה אמיתית פותחת מקומות שהרצאה לא מגיעה אליהם.</p>
-          </div>
-        </div>
-        <div class="method-step reveal in">
-          <div class="method-num">3</div>
-          <div>
-            <h3>כלים ומסגרות חשיבה</h3>
-            <p>כלים מעשיים שהילדים יוצאים איתם ומשתמשים בהם ביום-יום — בצ'אטים, ברשתות, מול תוכן.</p>
-          </div>
-        </div>
-        <div class="method-step reveal in">
-          <div class="method-num">4</div>
-          <div>
-            <h3>העצמה ואחריות</h3>
-            <p>הילדים יוצאים עם תחושת מסוגלות: אני יכול לבחור, אני יכול להשפיע לטובה גם ברשת.</p>
-          </div>
-        </div>
-      </div>
-      <div class="method-features reveal in">
-        <h3>הסדנה מותאמת לכם</h3>
-        <div class="method-feature-list">
-          <div class="method-feature-item">
-            <span class="method-feature-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            מותאמת לגיל ולשכבה
-          </div>
-          <div class="method-feature-item">
-            <span class="method-feature-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            אינטראקטיבית ומבוססת חוויה
-          </div>
-          <div class="method-feature-item">
-            <span class="method-feature-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            גמישה — כיתה / שכבה / כל בית הספר
-          </div>
-          <div class="method-feature-item">
-            <span class="method-feature-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            מתאימה לכיתות ג׳–ו׳
-          </div>
-          <div class="method-feature-item">
-            <span class="method-feature-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-            ניתנת להתאמה לאירועים מיוחדים
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════ -->
 <!-- WHO IS IT FOR                 -->
 <!-- ══════════════════════════════ -->
 <section id="who" class="warm">
   <div class="container">
     <div class="reveal in" style="text-align:center">
       <h2 class="section-h2">למי מיועדת הסדנה?</h2>
-      <p class="section-lead" style="margin-inline:auto">תלמידי כיתות <strong>ג׳–ו׳</strong> — בכל מסגרת שבה הם נמצאים.</p>
+      <p class="section-lead" style="margin-inline:auto">תלמידי כיתות <strong>ג׳-ו׳</strong> - בכל מסגרת שבה הם נמצאים.</p>
     </div>
     <ul class="who-grid" style="list-style:none;padding:0">
       <li class="who-card reveal in">
@@ -1411,7 +1386,7 @@
         <div class="who-card-icon">
           <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 00-3-3.87M17 3.13a4 4 0 010 7.75"/></svg>
         </div>
-        <div class="who-card-title">מתנסים ומרכזי קהילה</div>
+        <div class="who-card-title">מתנ"סים ומרכזי קהילה</div>
       </li>
       <li class="who-card reveal in">
         <div class="who-card-icon">
@@ -1442,42 +1417,6 @@
 </section>
 
 <!-- ══════════════════════════════ -->
-<!-- WHAT MAKES IT SPECIAL         -->
-<!-- ══════════════════════════════ -->
-<section id="special">
-  <div class="container-wide">
-    <div class="reveal in" style="text-align:center">
-      <div class="section-divider" style="margin-inline:auto"></div>
-      <h2 class="section-h2">מה הופך את הסדנה<br>לכזו שילדים זוכרים.</h2>
-      <p class="section-lead" style="margin-inline:auto">סדנה שמדברת אל הילדים מתוך העולם שלהם — בכלים שגורמים להם להקשיב, להבין ולפעול.</p>
-    </div>
-    <div class="special-grid">
-      <div class="special-card reveal in">
-        <div class="special-icon s1">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-        </div>
-        <h3>מבפנים של עולם הרשתות</h3>
-        <p>7+ שנים ביצירת תוכן. 140 מיליון צפיות במיזם "לזכרם". אני מבין איך כל פלטפורמה עובדת — ומסביר לילדים בשפה שלהם איך הכל עובד מאחורי הקלעים.</p>
-      </div>
-      <div class="special-card reveal reveal-delay-1 in">
-        <div class="special-icon s2">
-          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-        </div>
-        <h3>בשפה ובגובה של הילדים</h3>
-        <p>דוגמאות מטרנדים שהם מכירים, סרטונים שראו השבוע, מימים שעוברים בכיתה. הסדנה היא שיחה אמיתית — הם משתתפים, שואלים ומדברים.</p>
-      </div>
-      <div class="special-card reveal reveal-delay-2 in">
-        <div class="special-icon s3">
-          <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        </div>
-        <h3>מעצימה ומכבדת</h3>
-        <p>הסדנה מדברת עם הילדים, לא מעליהם. הם יוצאים עם תחושה שהם יכולים לבחור — ושהבחירות שלהם ברשת באמת משנות.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════ -->
 <!-- ABOUT YAGEL                   -->
 <!-- ══════════════════════════════ -->
 <section id="about">
@@ -1493,29 +1432,35 @@
       <p class="about-role reveal in">יוצר תוכן, יזם חברתי ומנחה סדנאות</p>
       <div class="about-story reveal in">
         <p>
-          במשך שנים עבדתי בעולם התוכן והרשתות החברתיות,
-          וראיתי מקרוב כמה חזק התוכן משפיע על הדרך שבה ילדים חושבים, מדברים ומתנהגים.
+          במשך שנים עבדתי בעולם התוכן והרשתות החברתיות. ראיתי מקרוב כמה חזק התוכן משפיע על הדרך שבה ילדים חושבים, מדברים ומתנהגים.
         </p>
         <br>
         <p>
           הבנתי שמה שחסר לילדים הוא מישהו שיעזור להם להבין
-          <strong>איך העולם הזה באמת עובד</strong> —
+          <strong>איך העולם הזה באמת עובד</strong>,
           ויתן להם כלים לנווט בו בעצמם.
         </p>
         <br>
         <p>
           אני עדיין זוכר איך זה מרגיש להיות הילד שמרגיש שלא באמת מבינים אותו.
-          אולי בגלל זה היה לי כל כך חשוב לבנות סדנה שמדברת <strong>איתם</strong> —
+          אולי בגלל זה היה לי כל כך חשוב לבנות סדנה שמדברת <strong>איתם</strong>,
           בשפה שלהם, בגובה העיניים.
         </p>
       </div>
       <div class="creds-list reveal in">
         <div class="cred-item"><div class="cred-dot"></div> 7+ שנות ניסיון ביצירת תוכן ורשתות חברתיות</div>
         <div class="cred-item"><div class="cred-dot"></div> בוגר הטכניון</div>
-        <div class="cred-item"><div class="cred-dot"></div> בוגר קורס DBT — המכללה האקדמית יפו</div>
-        <div class="cred-item"><div class="cred-dot"></div> מייסד "לזכרם" — 140 מיליון צפיות באינסטגרם</div>
-
+        <div class="cred-item"><div class="cred-dot"></div> בוגר קורס DBT, המכללה האקדמית יפו</div>
+        <div class="cred-item"><div class="cred-dot"></div> מייסד מיזם ההנצחה הלאומי "לזכרם" באינסטגרם</div>
         <div class="cred-item"><div class="cred-dot"></div> מנחה סדנאות בבתי ספר יסודי, חטיבה ותיכון</div>
+      </div>
+      <div class="reveal in" style="margin-top:40px;padding-top:32px;border-top:1px solid var(--border)">
+        <p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-soft);margin-bottom:14px">המיזם סוקר ב</p>
+        <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+          <img src="images/logo-ynet.gif" alt="ynet" style="height:34px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">
+          <img src="images/logo-mako.png" alt="mako" style="height:34px;width:auto;object-fit:contain;opacity:0.85;filter:drop-shadow(0 0 6px rgba(0,0,0,.6)) drop-shadow(0 1px 3px rgba(0,0,0,.8));transition:opacity .2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">
+          <img src="images/logo-ice.png" alt="ice" style="height:34px;width:auto;object-fit:contain;opacity:0.85;transition:opacity .2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">
+        </div>
       </div>
     </div>
   </div>
@@ -1528,7 +1473,7 @@
   <div class="lezichram-inner container-wide">
     <div class="lezichram-content reveal in">
       <div class="chapter-label">כי רשתות חברתיות יכולות לעשות טוב</div>
-      <h2>מיזם <span style="color:var(--orange)">"לזכרם"</span> —<br>ההוכחה שתוכן<br>יכול לרגש ולחבר.</h2>
+      <h2>מיזם <span style="color:var(--orange)">"לזכרם"</span><br>ההוכחה שתוכן<br>יכול לרגש ולחבר.</h2>
       <div class="insta-row-mobile">
         <div class="insta-card" onclick="openLightbox('images/lezichram post screenshot.jpg')">
           <img src="images/lezichram post screenshot.jpg" alt="פוסט לזכרם">
@@ -1551,14 +1496,6 @@
         <div class="lezichram-stat-num">140<span>M</span></div>
         <p>צפיות באינסטגרם · 20,000+ נופלים מונצחים · מיזם לאומי</p>
       </div>
-      <div class="media-logos">
-        <p class="media-logos-label">סיקרו את המיזם</p>
-        <div class="media-logos-row">
-          <img src="images/logo-ynet.gif" alt="ynet" class="media-logo">
-          <img src="images/logo-mako.png" alt="mako" class="media-logo">
-          <img src="images/logo-ice.png" alt="ice" class="media-logo">
-        </div>
-      </div>
     </div>
     <div class="lezichram-image reveal reveal-delay-1 in">
       <div class="lezichram-img-card">
@@ -1580,27 +1517,6 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════ -->
-<!-- VIDEO                         -->
-<!-- ══════════════════════════════ -->
-<section id="video" class="warm">
-  <div class="container">
-    <div class="reveal in" style="text-align:center">
-      <h2 class="section-h2">רגע להכיר.</h2>
-      <p class="section-lead" style="margin-inline:auto;max-width:480px">
-        ראיון שלי בערוץ i24 על מיזם "לזכרם".
-      </p>
-    </div>
-    <div class="video-wrap reveal in">
-      <video id="mainVideo" preload="metadata" poster="images/yagel-lezichram.jpg">
-        <source src="images/i24-interview.mp4" type="video/mp4">
-      </video>
-      <button class="video-play-btn" id="playBtn" aria-label="הפעל וידאו">
-        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-      </button>
-    </div>
-  </div>
-</section>
 
 <!-- ══════════════════════════════ -->
 <!-- FAQ                           -->
@@ -1616,7 +1532,7 @@
           <span class="faq-q">מה ייחודי בסדנת "ילדים ברשת"?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">הסדנה מגיעה מבפנים — יגל בר יוצר תוכן עם 7+ שנות ניסיון ו-140 מיליון צפיות, ומסביר לילדים איך הרשתות החברתיות עובדות מאחורי הקלעים. הדוגמאות, הטרנדים והשפה — כולם מהעולם שהילדים חיים בו. זה לא הרצאה על "סכנות האינטרנט" — זה שיחה שגורמת להם להקשיב ולחשוב.</p>
+        <p class="faq-a">הסדנה מגיעה מבפנים. יגל בר יוצר תוכן עם 7+ שנות ניסיון ו-140 מיליון צפיות, ומסביר לילדים איך הרשתות החברתיות עובדות מאחורי הקלעים. הדוגמאות, הטרנדים והשפה - כולם מהעולם שהילדים חיים בו. זה לא הרצאה על "סכנות האינטרנט". זו שיחה שגורמת להם להקשיב ולחשוב.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
@@ -1624,9 +1540,9 @@
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
         <div class="faq-a">
-          <p><strong>להבין</strong> — למה קשה להפסיק לגלול, איך יוצרי תוכן ופרסום משפיעים עליהם, מה עומד מאחורי טרנדים ויראליים.</p>
-          <p><strong>לפעול נכון</strong> — איך לזהות אלימות ברשת ולהגיב לה, מה לעשות כשחבר נפגע, איך לשמור על גבולות ופרטיות בצ'אטים וברשת.</p>
-          <p><strong>להרגיש מסוגלים</strong> — הילדים יוצאים עם אמונה שהם יכולים לבחור, להשפיע לטובה, ולהיות חלק ממרחב דיגיטלי בריא יותר.</p>
+          <p><strong>להבין:</strong> למה קשה להפסיק לגלול, איך יוצרי תוכן ופרסום משפיעים עליהם, מה עומד מאחורי טרנדים ויראליים.</p>
+          <p><strong>לפעול נכון:</strong> איך לזהות בריונות ברשת ולהגיב לה, מה לעשות כשחבר נפגע, איך לשמור על גבולות ופרטיות בצ'אטים וברשת.</p>
+          <p><strong>להרגיש מסוגלים:</strong> הילדים יוצאים עם אמונה שהם יכולים לבחור, להשפיע לטובה, ולהיות חלק ממרחב דיגיטלי בריא יותר.</p>
         </div>
       </div>
       <div class="faq-item reveal in">
@@ -1634,14 +1550,14 @@
           <span class="faq-q">כמה זמן נמשכת הסדנה?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">סדנה חד-פעמית נמשכת כשעה. ניתן להזמין גם סדרת מפגשים מעמיקה — לפי הצורך ולוח הזמנים של בית הספר.</p>
+        <p class="faq-a">סדנה חד-פעמית נמשכת כשעה. ניתן להזמין גם סדרת מפגשים מעמיקה, לפי הצורך ולוח הזמנים של בית הספר.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
           <span class="faq-q">לכמה תלמידים ביחד?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">גמיש — מכיתה אחת ועד שכבה שלמה ואפילו כל בית הספר. הסדנה מותאמת לגודל הקבוצה ולמרחב.</p>
+        <p class="faq-a">גמיש. מכיתה אחת ועד שכבה שלמה ואפילו כל בית הספר. הסדנה מותאמת לגודל הקבוצה ולמרחב.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
@@ -1655,7 +1571,7 @@
           <span class="faq-q">כמה עולה הסדנה?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">כל הצעה נבנית באופן אישי, בהתאם להיקף הסדנה, מספר התלמידים ולמטרות החינוכיות של בית הספר. הסדנה מאושרת למימון מתקציב גפ"ן — מה שמפשט משמעותית את התהליך. צרו קשר ונבנה יחד את ההצעה המתאימה.</p>
+        <p class="faq-a">כל הצעה נבנית באופן אישי, בהתאם להיקף הסדנה, מספר התלמידים ולמטרות החינוכיות של בית הספר. הסדנה מאושרת למימון מתקציב גפ"ן, מה שמפשט משמעותית את התהליך. צרו קשר ונבנה יחד את ההצעה המתאימה.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
