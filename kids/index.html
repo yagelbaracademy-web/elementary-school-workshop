@@ -1123,6 +1123,19 @@
       .play-btn { width: 96px; height: 96px; }
       .play-btn svg { width: 34px; height: 34px; }
     }
+    .wc-intro {
+      font-size: 17px; color: var(--text-mid);
+      line-height: 1.75; margin-bottom: 20px;
+    }
+    .wc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 40px;
+    }
+    @media (max-width: 640px) {
+      .wc-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
     .video-learn { margin-top: 48px; }
     .video-learn-title {
       font-size: 20px; font-weight: 700;
@@ -1361,6 +1374,42 @@
 </section>
 
 <!-- ══════════════════════════════ -->
+<!-- WORKSHOP CONTENT              -->
+<!-- ══════════════════════════════ -->
+<section id="workshop-content" class="warm">
+  <div class="container">
+    <div class="reveal in">
+      <div class="section-divider"></div>
+      <p class="wc-intro">כל מי שעובד עם ילדים רואה את זה - חרמות, ילד שמתמודד עם בריונות, לחץ חברתי שמגיע לכיתה ממקום שלא רואים. אתם דואגים, אתם רוצים לעזור - אבל העולם הזה השתנה כל כך מהר, שקשה לדעת מאיפה לפתוח את השיחה.</p>
+      <p class="wc-intro">הילדים חיים בצ'אטים, במשחקי מחשב וברשתות חברתיות. הם נתקלים בבריונות, לחץ ומניפולציה — ולא תמיד מספרים. הם צריכים כלים שיעזרו להם להתמודד, ממי שחי את העולם הזה, יודע איך הוא עובד, ומדבר איתם בגובה העיניים.</p>
+    </div>
+    <div class="wc-grid reveal in">
+      <div class="wc-col">
+        <h3 class="video-learn-title">נושאי הסדנה</h3>
+        <ul class="video-learn-list">
+          <li>אלימות ברשת, שיימינג ולחץ חברתי בעולם הדיגיטלי</li>
+          <li>איך רשתות חברתיות באמת עובדות — מנגנוני ההשפעה הנסתרים שנוצרו למשוך את תשומת הלב שלנו</li>
+          <li>משפיענים, טרנדים, ופרסום סמוי — איך לזהות כשיוצרי תוכן משפיעים עלינו</li>
+          <li>תקשורת מכבדת בצ'אטים, במשחקים וברשתות החברתיות</li>
+          <li>איך לזהות טרנד חיובי לעומת טרנד שעלול לסכן או לפגוע</li>
+        </ul>
+      </div>
+      <div class="wc-col">
+        <h3 class="video-learn-title">מה הילדים ילמדו?</h3>
+        <ul class="video-learn-list">
+          <li>לזהות מתי מנסים להשפיע עליהם ברשת</li>
+          <li>להבדיל בין טרנד חיובי לטרנד מסוכן</li>
+          <li>להתמודד עם שיימינג, לחץ חברתי ובריונות ברשת</li>
+          <li>למה קשה להפסיק לגלול — ואיך לפעול לפי שיקול דעת</li>
+          <li>לשמור על פרטיות ובטיחות ברשת</li>
+          <li>להשתמש ברשתות בצורה חכמה, מכבדת ומקדמת</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ -->
 <!-- VIDEO                         -->
 <!-- ══════════════════════════════ -->
 <section id="video">
@@ -1368,17 +1417,6 @@
     <div class="reveal in" style="text-align:center">
       <div class="section-divider" style="margin-inline:auto"></div>
       <h2 class="section-h2">2 דקות על הסדנה והערך הייחודי שלה</h2>
-    </div>
-    <div class="video-learn reveal in">
-      <h3 class="video-learn-title">מה הילדים ילמדו?</h3>
-      <ul class="video-learn-list">
-        <li>לזהות מתי מנסים להשפיע עליהם ברשת</li>
-        <li>להבדיל בין טרנד חיובי לטרנד מסוכן</li>
-        <li>להתמודד עם שיימינג, לחץ חברתי ובריונות ברשת</li>
-        <li>למה קשה להפסיק לגלול — ואיך לפעול לפי שיקול דעת</li>
-        <li>לשמור על פרטיות ובטיחות ברשת</li>
-        <li>להשתמש ברשתות בצורה חכמה, מכבדת ומקדמת</li>
-      </ul>
     </div>
     <div class="video-wrap reveal in">
       <div class="video-poster-wrap" onclick="this.parentElement.innerHTML='<iframe src=\'https://videohost.yagelbar.com/embed/803fe2a12dde48\' allowfullscreen allow=\'autoplay; fullscreen\'></iframe>'">
