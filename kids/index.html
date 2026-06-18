@@ -1090,12 +1090,35 @@
       max-width: 720px;
       margin: 48px auto 0;
     }
-    .video-wrap iframe {
+    .video-wrap iframe,
+    .video-poster-wrap {
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
       border: none;
     }
+    .video-poster-wrap { cursor: pointer; }
+    .video-poster-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+    .play-btn {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px; height: 72px;
+      background: rgba(255,255,255,.92);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,.22);
+      transition: transform .2s, box-shadow .2s;
+      pointer-events: none;
+    }
+    .video-poster-wrap:hover .play-btn {
+      transform: translate(-50%, -50%) scale(1.1);
+      box-shadow: 0 12px 40px rgba(0,0,0,.28);
+    }
+    .play-btn svg { width: 26px; height: 26px; fill: var(--orange); margin-right: -3px; }
   </style>
 </head>
 <body>
@@ -1321,11 +1344,16 @@
   <div class="container">
     <div class="reveal in" style="text-align:center">
       <div class="section-divider" style="margin-inline:auto"></div>
-      <h2 class="section-h2">ראו איך<br>הסדנה נראית.</h2>
-      <p class="section-lead" style="margin-inline:auto">כמה דקות שיסבירו יותר מאלף מילים.</p>
+      <h2 class="section-h2">2 דקות על הסדנה</h2>
+      <p class="section-lead" style="margin-inline:auto">והערך הייחודי שלה.</p>
     </div>
     <div class="video-wrap reveal in">
-      <iframe src="https://videohost.yagelbar.com/embed/803fe2a12dde48" allowfullscreen allow="autoplay; fullscreen"></iframe>
+      <div class="video-poster-wrap" onclick="this.parentElement.innerHTML='<iframe src=\'https://videohost.yagelbar.com/embed/803fe2a12dde48\' allowfullscreen allow=\'autoplay; fullscreen\'></iframe>'">
+        <img src="images/video-poster.jpg" alt="סרטון הסבר סדנת ילדים ברשת">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
     </div>
   </div>
 </section>
