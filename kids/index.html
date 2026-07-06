@@ -357,6 +357,60 @@
       .phone-float svg { width: 24px; height: 24px; }
     }
 
+    /* ── SECTION NAV ── */
+    .section-nav {
+      position: fixed;
+      bottom: 22px; right: 8px;
+      z-index: 250;
+      width: 48px;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0;
+      background: rgba(255,255,255,.6);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(17,17,17,.08);
+      border-radius: 999px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.06);
+      touch-action: none;
+    }
+    .section-nav .tick-zone {
+      position: relative;
+      height: 14px;
+      cursor: pointer;
+    }
+    .section-nav .tick {
+      position: absolute;
+      top: 50%; right: 12px;
+      transform: translateY(-50%);
+      width: 11px; height: 3px;
+      border-radius: 100px;
+      background: rgba(17,17,17,.22);
+      transition: background .15s, width .15s, height .15s;
+    }
+    .section-nav .tick-zone.active .tick { background: var(--orange); width: 16px; }
+    .section-nav .tick-zone.dragging .tick { background: var(--text); width: 32px; height: 5px; }
+    .section-nav-tooltip {
+      position: fixed;
+      right: 70px;
+      transform: translateY(-50%);
+      background: var(--text);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 8px;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .15s;
+      z-index: 251;
+    }
+    .section-nav-tooltip.visible { opacity: 1; }
+    @media (max-width: 720px) {
+      .section-nav { bottom: 16px; right: 6px; }
+    }
+
     /* ── WHATSAPP ALT (form) ── */
     .wa-alt { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; font-size: 14px; font-weight: 600; color: var(--text-mid); }
     .wa-alt a { color: #1DA851; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
@@ -856,6 +910,21 @@
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg>
 </a>
 
+<nav class="section-nav" id="sectionNav" aria-label="ניווט בין סקשנים">
+  <div class="tick-zone" data-target="#hero" data-label="פתיחה"><span class="tick"></span></div>
+  <div class="tick-zone" data-target="#intro" data-label="המציאות ברשת"><span class="tick"></span></div>
+  <div class="tick-zone" data-target="#testimonials" data-label="המלצות"><span class="tick"></span></div>
+  <div class="tick-zone" data-target="#about" data-label="על המרצה"><span class="tick"></span></div>
+  <div class="tick-zone" data-target="#proof" data-label="בשטח"><span class="tick"></span></div>
+  <div class="tick-zone" data-target="#outcomes" data-label="מה שיישאר"><span class="tick"></span></div>
+  <div class="tick-zone" data-target="#quick-facts" data-label="מבנה הסדנה"><span class="tick"></span></div>
+  <div class="tick-zone" data-target="#lezichram" data-label="לזכרם"><span class="tick"></span></div>
+  <div class="tick-zone" data-target="#how" data-label="איך זה עובד"><span class="tick"></span></div>
+  <div class="tick-zone" data-target="#faq" data-label="שאלות ותשובות"><span class="tick"></span></div>
+  <div class="tick-zone" data-target="#cta" data-label="יצירת קשר"><span class="tick"></span></div>
+</nav>
+<div class="section-nav-tooltip" id="sectionNavTooltip"></div>
+
 <!-- Lightbox -->
 <div id="lightbox" onclick="closeLightbox()">
   <button class="lb-close" onclick="event.stopPropagation();closeLightbox()" aria-label="סגור">✕</button>
@@ -942,6 +1011,95 @@
   function openLightbox(src) { document.getElementById('lb-img').src=src; document.getElementById('lightbox').classList.add('open'); document.body.style.overflow='hidden'; }
   function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow=''; }
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLightbox(); });
+
+  // SECTION NAV
+  document.addEventListener('DOMContentLoaded', function() {
+    const navEl = document.getElementById('sectionNav');
+    if (!navEl) return;
+    const zones = Array.from(navEl.querySelectorAll('.tick-zone'));
+    const tooltip = document.getElementById('sectionNavTooltip');
+    let dragIndex = -1;
+
+    const vibrate = () => { if (navigator.vibrate) navigator.vibrate(8); };
+
+    const showTooltip = (zone) => {
+      tooltip.textContent = zone.dataset.label;
+      tooltip.style.top = zone.getBoundingClientRect().top + (zone.offsetHeight / 2) + 'px';
+      tooltip.classList.add('visible');
+    };
+    const hideTooltip = () => tooltip.classList.remove('visible');
+
+    const indexFromPoint = (clientY) => {
+      for (let i = 0; i < zones.length; i++) {
+        const r = zones[i].getBoundingClientRect();
+        if (clientY >= r.top && clientY <= r.bottom) return i;
+      }
+      const first = zones[0].getBoundingClientRect();
+      const last = zones[zones.length - 1].getBoundingClientRect();
+      if (clientY < first.top) return 0;
+      if (clientY > last.bottom) return zones.length - 1;
+      return -1;
+    };
+
+    const setDragIndex = (i) => {
+      if (i === dragIndex) return;
+      if (dragIndex >= 0) zones[dragIndex].classList.remove('dragging');
+      dragIndex = i;
+      if (dragIndex >= 0) {
+        zones[dragIndex].classList.add('dragging');
+        showTooltip(zones[dragIndex]);
+        vibrate();
+      }
+    };
+
+    const endDrag = () => {
+      if (dragIndex >= 0) {
+        const zone = zones[dragIndex];
+        zone.classList.remove('dragging');
+        if (zone.dataset.target === '#hero') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          const target = document.querySelector(zone.dataset.target);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+      dragIndex = -1;
+      hideTooltip();
+    };
+
+    navEl.addEventListener('pointerdown', (e) => {
+      try { navEl.setPointerCapture(e.pointerId); } catch (err) {}
+      setDragIndex(indexFromPoint(e.clientY));
+    });
+    navEl.addEventListener('pointermove', (e) => {
+      if (dragIndex === -1 && e.pointerType === 'mouse') return;
+      if (e.buttons === 0 && e.pointerType === 'mouse') return;
+      const i = indexFromPoint(e.clientY);
+      if (i !== -1) setDragIndex(i);
+    });
+    navEl.addEventListener('pointerup', endDrag);
+    navEl.addEventListener('pointercancel', endDrag);
+
+    const sections = zones.map(z => document.querySelector(z.dataset.target));
+    let spyTicking = false;
+    const updateActiveByScroll = () => {
+      spyTicking = false;
+      const refY = window.innerHeight * 0.35;
+      let activeIdx = 0;
+      sections.forEach((sec, i) => {
+        if (sec && sec.getBoundingClientRect().top <= refY) activeIdx = i;
+      });
+      zones.forEach(z => z.classList.remove('active'));
+      zones[activeIdx].classList.add('active');
+    };
+    window.addEventListener('scroll', () => {
+      if (!spyTicking) {
+        spyTicking = true;
+        requestAnimationFrame(updateActiveByScroll);
+      }
+    }, { passive: true });
+    updateActiveByScroll();
+  });
 </script>
 
 </body>
