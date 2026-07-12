@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מדריך חינם למורים: הפסיכולוגיה מאחורי הרשתות החברתיות | יגל בר</title>
+  <meta name="description" content="מדריך חינם להורדה למורים ולצוותי חינוך: איך באמת משפיעים על ילדים שגדלים לתוך המסך. 2 עמודים, 3 מהלכים ליישום מחר בבוקר. מאת יגל בר, מייסד 'לזכרם'.">
+  <meta property="og:title" content="מדריך חינם למורים: הפסיכולוגיה מאחורי הרשתות החברתיות">
+  <meta property="og:description" content="איך באמת משפיעים על ילדים שגדלים לתוך המסך - 2 עמודים, 3 מהלכים ליישום מחר בבוקר. מדריך חינם להורדה.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --orange:  #FF6B2B;
+      --orange2: #E85510;
+      --orange-soft: #FFF3EC;
+      --orange-mid:  #FFE1D1;
+      --navy:    #0F172A;
+      --gray600: #475569;
+      --gray400: #94A3B8;
+      --gray200: #E2E8F0;
+      --gray50:  #F8FAFC;
+      --white:   #FFFFFF;
+      --radius:  14px;
+      --shadow-lg: 0 16px 56px rgba(232,85,16,.16);
+    }
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      font-family:'Heebo',sans-serif;
+      color:var(--navy);
+      background:var(--white);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* ── nav ── */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--gray200);
+    }
+    .nav-inner{
+      max-width:1120px; margin:0 auto;
+      padding:14px 24px;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    .nav-logo{ font-size:17px; font-weight:800; color:var(--navy); text-decoration:none; }
+    .nav-logo span{ color:var(--orange); }
+    .nav-cta{
+      background:var(--orange); color:var(--white);
+      font-size:14px; font-weight:700;
+      padding:9px 20px; border-radius:100px;
+      text-decoration:none;
+      transition:background .2s, transform .15s;
+    }
+    .nav-cta:hover{ background:var(--orange2); transform:translateY(-1px); }
+
+    /* ── hero ── */
+    .hero{
+      background:linear-gradient(165deg,#FFFFFF 0%,var(--orange-soft) 60%,var(--orange-mid) 100%);
+      padding:64px 24px 80px;
+    }
+    .hero-inner{
+      max-width:1120px; margin:0 auto;
+      display:grid; grid-template-columns:1.15fr .85fr;
+      gap:56px; align-items:center;
+    }
+    .badge{
+      display:inline-block;
+      font-size:13px; font-weight:800; letter-spacing:.04em;
+      color:var(--orange2);
+      background:var(--white);
+      border:1px solid var(--orange-mid);
+      border-radius:100px;
+      padding:7px 18px;
+      margin-bottom:20px;
+      box-shadow:0 2px 8px rgba(232,85,16,.08);
+    }
+    .hero h1{
+      font-size:clamp(34px,4.6vw,54px);
+      font-weight:900; line-height:1.12;
+      margin-bottom:8px;
+    }
+    .hero h1 em{ font-style:normal; color:var(--orange2); }
+    .hero-free{
+      font-size:clamp(20px,2.4vw,26px);
+      font-weight:800; color:var(--navy);
+      margin-bottom:18px;
+    }
+    .hero-free mark{
+      background:linear-gradient(transparent 55%, var(--orange-mid) 55%);
+      color:var(--navy); padding:0 2px;
+    }
+    .hero-sub{
+      font-size:18px; color:var(--gray600); font-weight:500;
+      max-width:520px; margin-bottom:28px;
+    }
+    .hero-points{ list-style:none; display:flex; flex-direction:column; gap:14px; margin-bottom:32px; }
+    .hero-points li{
+      display:flex; gap:12px; align-items:flex-start;
+      font-size:16.5px; font-weight:500; color:var(--navy);
+    }
+    .hero-points .chk{
+      width:26px; height:26px; flex-shrink:0; margin-top:1px;
+      border-radius:50%;
+      background:var(--orange);
+      color:var(--white);
+      display:flex; align-items:center; justify-content:center;
+      font-size:14px; font-weight:900;
+    }
+    .hero-author{
+      display:flex; align-items:center; gap:14px;
+      padding-top:22px;
+      border-top:1px solid rgba(232,85,16,.18);
+      max-width:520px;
+    }
+    .hero-author img{
+      width:52px; height:52px; border-radius:50%;
+      object-fit:cover; border:2px solid var(--white);
+      box-shadow:0 2px 10px rgba(0,0,0,.12);
+    }
+    .hero-author p{ font-size:14px; color:var(--gray600); }
+    .hero-author p b{ color:var(--navy); font-weight:800; display:block; font-size:15px; }
+
+    /* ── form card ── */
+    .form-card{
+      background:var(--white);
+      border-radius:22px;
+      box-shadow:var(--shadow-lg);
+      border:1px solid var(--orange-mid);
+      padding:36px 32px;
+    }
+    .form-card h2{ font-size:24px; font-weight:900; margin-bottom:6px; }
+    .form-card .form-sub{ font-size:14.5px; color:var(--gray600); margin-bottom:24px; }
+    .field{ margin-bottom:16px; }
+    .field label{
+      display:block; font-size:13.5px; font-weight:700;
+      margin-bottom:6px; color:var(--navy);
+    }
+    .field input{
+      width:100%;
+      font-family:'Heebo',sans-serif;
+      font-size:15.5px;
+      padding:13px 16px;
+      border:1.5px solid var(--gray200);
+      border-radius:var(--radius);
+      background:var(--gray50);
+      color:var(--navy);
+      transition:border-color .2s, background .2s;
+      outline:none;
+    }
+    .field input:focus{ border-color:var(--orange); background:var(--white); }
+    .name-row{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .btn-submit{
+      width:100%;
+      font-family:'Heebo',sans-serif;
+      font-size:17px; font-weight:800;
+      color:var(--white);
+      background:var(--orange);
+      border:none; border-radius:var(--radius);
+      padding:15px;
+      cursor:pointer;
+      margin-top:6px;
+      transition:background .2s, transform .15s, box-shadow .2s;
+    }
+    .btn-submit:hover{ background:var(--orange2); transform:translateY(-2px); box-shadow:0 10px 28px rgba(232,85,16,.35); }
+    .btn-submit:disabled{ opacity:.65; cursor:default; transform:none; }
+    .form-note{
+      font-size:12.5px; color:var(--gray400);
+      text-align:center; margin-top:14px;
+    }
+    .form-success{
+      display:none; text-align:center; padding:26px 0 10px;
+    }
+    .form-success .big{ font-size:44px; margin-bottom:10px; }
+    .form-success h3{ font-size:22px; font-weight:900; margin-bottom:8px; }
+    .form-success p{ font-size:15px; color:var(--gray600); margin-bottom:22px; }
+    .btn-download{
+      display:inline-block;
+      background:var(--orange); color:var(--white);
+      font-size:16px; font-weight:800;
+      padding:14px 34px; border-radius:var(--radius);
+      text-decoration:none;
+      transition:background .2s, transform .15s;
+    }
+    .btn-download:hover{ background:var(--orange2); transform:translateY(-2px); }
+
+    /* ── inside section ── */
+    .inside{ padding:80px 24px; }
+    .inside-inner{ max-width:1120px; margin:0 auto; }
+    .sec-kicker{
+      display:block; font-size:13px; font-weight:800; letter-spacing:.06em;
+      color:var(--orange2); margin-bottom:10px;
+    }
+    .inside h2{ font-size:clamp(26px,3.4vw,38px); font-weight:900; margin-bottom:14px; }
+    .inside .sec-sub{ font-size:17px; color:var(--gray600); max-width:640px; margin-bottom:44px; }
+    .inside-grid{
+      display:grid; grid-template-columns:repeat(2,1fr); gap:20px;
+    }
+    .in-card{
+      border:1px solid var(--gray200);
+      border-radius:18px;
+      padding:28px;
+      background:var(--gray50);
+      transition:transform .2s, box-shadow .2s, border-color .2s;
+    }
+    .in-card:hover{ transform:translateY(-4px); box-shadow:0 12px 32px rgba(15,23,42,.08); border-color:var(--orange-mid); }
+    .in-card .num{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:40px; height:40px; border-radius:12px;
+      background:var(--orange); color:var(--white);
+      font-size:18px; font-weight:900;
+      margin-bottom:16px;
+    }
+    .in-card h3{ font-size:19px; font-weight:800; margin-bottom:8px; }
+    .in-card p{ font-size:15px; color:var(--gray600); }
+
+    /* ── author band ── */
+    .author{ background:var(--navy); color:var(--white); padding:72px 24px; }
+    .author-inner{
+      max-width:1120px; margin:0 auto;
+      display:grid; grid-template-columns:auto 1fr; gap:44px; align-items:center;
+    }
+    .author img{
+      width:170px; height:170px; border-radius:50%;
+      object-fit:cover;
+      border:4px solid var(--orange);
+    }
+    .author .sec-kicker{ color:var(--orange); }
+    .author h2{ font-size:30px; font-weight:900; margin-bottom:12px; }
+    .author p{ font-size:16.5px; color:rgba(255,255,255,.82); max-width:660px; }
+    .author p strong{ color:var(--white); }
+
+    /* ── bottom cta ── */
+    .bottom-cta{
+      background:linear-gradient(150deg,var(--orange-soft),var(--orange-mid));
+      padding:80px 24px; text-align:center;
+    }
+    .bottom-cta h2{ font-size:clamp(26px,3.4vw,38px); font-weight:900; margin-bottom:12px; }
+    .bottom-cta p{ font-size:17px; color:var(--gray600); margin-bottom:28px; }
+    .bottom-cta a{
+      display:inline-block;
+      background:var(--orange); color:var(--white);
+      font-size:18px; font-weight:800;
+      padding:16px 44px; border-radius:100px;
+      text-decoration:none;
+      box-shadow:0 10px 32px rgba(232,85,16,.3);
+      transition:background .2s, transform .15s;
+    }
+    .bottom-cta a:hover{ background:var(--orange2); transform:translateY(-2px); }
+
+    /* ── footer ── */
+    footer{
+      padding:28px 24px;
+      border-top:1px solid var(--gray200);
+      text-align:center;
+      font-size:13.5px; color:var(--gray400);
+    }
+    footer b{ color:var(--navy); }
+    footer .f-orange{ color:var(--orange); }
+
+    /* ── responsive ── */
+    @media (max-width: 900px){
+      .hero{ padding:44px 20px 60px; }
+      .hero-inner{ grid-template-columns:1fr; gap:40px; }
+      .inside-grid{ grid-template-columns:1fr; }
+      .author-inner{ grid-template-columns:1fr; text-align:center; gap:28px; justify-items:center; }
+      .hero-author{ max-width:none; }
+    }
+    @media (max-width: 480px){
+      .name-row{ grid-template-columns:1fr; }
+      .form-card{ padding:28px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════ NAV ══════ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">יגל בר <span>|</span> ילדים ברשת</a>
+      <a href="#signup" class="nav-cta">להורדת המדריך</a>
+    </div>
+  </nav>
+
+  <!-- ══════ HERO + FORM ══════ -->
+  <header class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-text">
+        <span class="badge">מדריך למורים ולצוותי חינוך · חינם להורדה</span>
+        <h1>הפסיכולוגיה מאחורי<br><em>הרשתות החברתיות</em></h1>
+        <p class="hero-free"><mark>איך באמת משפיעים על ילדים שגדלים לתוך המסך</mark></p>
+        <p class="hero-sub">2 עמודים, כתובים מהצד של יוצרי התוכן - הצד שיודע איך זה בנוי מבפנים. קריאה של 3 דקות, יישום כבר מחר בבוקר.</p>
+
+        <ul class="hero-points">
+          <li><span class="chk">✓</span>למה "תניח את הטלפון" זו לא בעיית משמעת - זה עיצוב</li>
+          <li><span class="chk">✓</span>משפט אחד להחליף - ולפתוח שיחה במקום עימות</li>
+          <li><span class="chk">✓</span>פעילות של 10 דקות שמביאה אותם לתובנה בעצמם</li>
+          <li><span class="chk">✓</span>בנוי להדפסה ולתלייה בחדר המורים</li>
+        </ul>
+
+        <div class="hero-author">
+          <img src="yagel-headshot.png" alt="יגל בר">
+          <p><b>יגל בר</b>יזם חברתי ויוצר תוכן, מייסד המיזם הלאומי "לזכרם" · בוגר הטכניון</p>
+        </div>
+      </div>
+
+      <div class="form-card" id="signup">
+        <form id="guideForm" novalidate>
+          <h2>קבלו את המדריך למייל</h2>
+          <p class="form-sub">מלאו פרטים והמדריך המלא (PDF) אצלכם - מיד וללא עלות.</p>
+
+          <div class="name-row">
+            <div class="field">
+              <label for="firstName">שם פרטי</label>
+              <input type="text" id="firstName" name="firstName" autocomplete="given-name" placeholder="שם פרטי">
+            </div>
+            <div class="field">
+              <label for="lastName">שם משפחה</label>
+              <input type="text" id="lastName" name="lastName" autocomplete="family-name" placeholder="שם משפחה">
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">אימייל</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="name@school.co.il" dir="ltr" style="text-align:right;">
+          </div>
+
+          <button type="submit" class="btn-submit">שלחו לי את המדריך</button>
+          <p class="form-note">בלי ספאם. רק המדריך, ומדי פעם תוכן שימושי לצוותי חינוך.</p>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <div class="big">🎉</div>
+          <h3>המדריך בדרך אליכם!</h3>
+          <p>שלחנו את המדריך למייל שהזנתם.<br>רוצים אותו כבר עכשיו?</p>
+          <a class="btn-download" href="guide-2p.pdf" download>להורדה מיידית (PDF)</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ══════ WHAT'S INSIDE ══════ -->
+  <section class="inside">
+    <div class="inside-inner">
+      <span class="sec-kicker">מה יש במדריך</span>
+      <h2>2 עמודים. 3 דקות קריאה. יישום מחר בבוקר.</h2>
+      <p class="sec-sub">בלי תיאוריה ארוכה - כתב גדול, נקודות שכל מורה מזהה מהשבוע האחרון, ומהלכים מוכנים לשימוש.</p>
+
+      <div class="inside-grid">
+        <div class="in-card">
+          <span class="num">1</span>
+          <h3>מכירים את זה?</h3>
+          <p>"משעמם לי" כבר בשיעור השני · הטלפון נאסף והראש נשאר בו · דרמת ווטסאפ של 23:00 שמתפוצצת בכיתה ב-08:00. שלושה רגעים שכל מורה חי - וההסבר האמיתי מאחוריהם.</p>
+        </div>
+        <div class="in-card">
+          <span class="num">2</span>
+          <h3>זו לא בעיית משמעת. זה עיצוב.</h3>
+          <p>מול הילד עומדים צוותים שלמים שנמדדים על דבר אחד: כמה זמן הוא יישאר במסך. שלושת המנגנונים - מכונת מזל בכיס, גלילה בלי סוף, אלגוריתם שלומד אותך - במשפט אחד כל אחד.</p>
+        </div>
+        <div class="in-card">
+          <span class="num">3</span>
+          <h3>3 מהלכים למחר בבוקר</h3>
+          <p>משפט אחד להחליף (0 דקות הכנה) · שאלה שאין עליה תשובה אוטומטית (5 דקות בפתיחת שיעור) · פעילות "המהנדס הסמוי" (10 דקות) - עם ה"למה זה עובד" של כל מהלך.</p>
+        </div>
+        <div class="in-card">
+          <span class="num">4</span>
+          <h3>בנוי לחדר המורים</h3>
+          <p>עמוד להבנה, עמוד ליישום. כתב גדול, מעוצב להדפסה - תולים על הקיר וכל הצוות מרוויח.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ AUTHOR ══════ -->
+  <section class="author">
+    <div class="author-inner">
+      <img src="yagel-lecture-circle.jpg" alt="יגל בר מרצה">
+      <div>
+        <span class="sec-kicker">מי כתב את המדריך</span>
+        <h2>יגל בר</h2>
+        <p>יזם חברתי ויוצר תוכן עם מעל <strong>100 מיליון צפיות ברשתות</strong>, בוגר הטכניון ומייסד המיזם הלאומי <strong>"לזכרם"</strong>. אני יודע מה עומד מאחורי כל טרנד וכל סרטון שגורם לילדים לא להפסיק לגלול - כי אני מגיע מהצד של יוצרי התוכן. את הכלים האלה אני מעביר לתלמידים בסדנת <strong>"ילדים ברשת"</strong> לכיתות ד'-ו' (מאושרת גפ"ן · 70107) בבתי ספר בכל הארץ.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ BOTTOM CTA ══════ -->
+  <section class="bottom-cta">
+    <h2>מוכנים להבין מה באמת קורה מאחורי המסך?</h2>
+    <p>המדריך חינם, קצר, וכתוב במיוחד למורים ולצוותי חינוך.</p>
+    <a href="#signup">להורדת המדריך בחינם</a>
+  </section>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer>
+    <b>יגל בר <span class="f-orange">|</span> ילדים ברשת</b> · <span dir="ltr">050-680-7708</span> · contact@yagelbar.com · © 2026 כל הזכויות שמורות
+  </footer>
+
+<script>
+  // ── חיבור לשירות דיוור ──
+  // TODO לפני הפעלה חיה: להציב כאן את כתובת ה-Webhook/Endpoint
+  // (Brevo / Make.com / Google Apps Script) שאליו יישלחו הנרשמים.
+  const FORM_ENDPOINT = null;
+
+  const form = document.getElementById('guideForm');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    const fields = [form.firstName, form.lastName, form.email];
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.value.trim());
+    const firstBad = fields.find(f => !f.value.trim()) || (!emailOk ? form.email : null);
+    if (firstBad) {
+      firstBad.focus();
+      firstBad.style.borderColor = '#EF4444';
+      firstBad.addEventListener('input', () => firstBad.style.borderColor = '', { once: true });
+      return;
+    }
+
+    const btn = form.querySelector('.btn-submit');
+    btn.disabled = true;
+    btn.textContent = 'שולח...';
+
+    const payload = {
+      first_name: form.firstName.value.trim(),
+      last_name:  form.lastName.value.trim(),
+      email:      form.email.value.trim(),
+      source:     'guide-psychology-social-media'
+    };
+
+    if (FORM_ENDPOINT) {
+      try {
+        await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      } catch (err) { /* ממשיכים להצגת ההצלחה גם אם הרשת נכשלה */ }
+    }
+
+    setTimeout(() => {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }, 500);
+  });
+</script>
+</body>
+</html>
