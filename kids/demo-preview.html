@@ -481,8 +481,11 @@
     .about-image { margin: 0 auto !important; }
 
     /* ── חץ גלילה בין סקשנים ── */
-    .section-scroll-arrow { display: flex; justify-content: center; padding: 4px 0 28px; color: var(--text-soft); }
-    .section-scroll-arrow svg { width: 20px; height: 20px; animation: sc 1.7s ease-in-out infinite; }
+    .section-scroll-arrow { display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 6px 0 30px; color: var(--orange); }
+    .section-scroll-arrow svg { width: 26px; height: 26px; animation: sc 1.7s ease-in-out infinite; }
+    .section-scroll-arrow svg:nth-child(1) { opacity: .3; }
+    .section-scroll-arrow svg:nth-child(2) { opacity: .65; animation-delay: .15s; }
+    .section-scroll-arrow svg:nth-child(3) { opacity: 1; animation-delay: .3s; }
   </style>
 </head>
 <body>
@@ -668,7 +671,9 @@
 </section>
 
 <div class="section-scroll-arrow" aria-hidden="true">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
 </div>
 
 <!-- ══ OUTCOMES ══ -->
