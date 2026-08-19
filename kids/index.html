@@ -961,6 +961,14 @@
   }, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
   document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
 
+  // WhatsApp click tracking
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(a) {
+    a.addEventListener('click', function() {
+      if (window.fbq) fbq('trackCustom', 'WhatsAppClick');
+      if (window.gtag) gtag('event', 'click_whatsapp', { event_category: 'whatsapp', event_label: 'kids_workshop' });
+    });
+  });
+
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
