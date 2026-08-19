@@ -969,6 +969,22 @@
     });
   });
 
+  // "Go to form" CTA click tracking
+  document.querySelectorAll('a[href="#cta"]').forEach(function(a) {
+    a.addEventListener('click', function() {
+      if (window.fbq) fbq('trackCustom', 'ClickToForm');
+      if (window.gtag) gtag('event', 'click_to_form', { event_category: 'cta', event_label: 'kids_workshop' });
+    });
+  });
+
+  // Form submit button click tracking
+  document.querySelectorAll('.js-contact-form .btn-submit').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (window.fbq) fbq('trackCustom', 'FormSubmitClick');
+      if (window.gtag) gtag('event', 'click_form_submit', { event_category: 'form', event_label: 'kids_workshop' });
+    });
+  });
+
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
