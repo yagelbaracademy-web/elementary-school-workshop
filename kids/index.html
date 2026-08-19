@@ -963,9 +963,15 @@
 
   // WhatsApp click tracking
   document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(a) {
+    var source = a.classList.contains('wa-float') ? 'float'
+                : a.classList.contains('btn-wa') ? 'form'
+                : 'footer';
+    var fbEvent = source === 'float' ? 'WhatsAppClickFloat'
+                : source === 'form' ? 'WhatsAppClickForm'
+                : 'WhatsAppClickFooter';
     a.addEventListener('click', function() {
-      if (window.fbq) fbq('trackCustom', 'WhatsAppClick');
-      if (window.gtag) gtag('event', 'click_whatsapp', { event_category: 'whatsapp', event_label: 'kids_workshop' });
+      if (window.fbq) fbq('trackCustom', fbEvent);
+      if (window.gtag) gtag('event', 'click_whatsapp', { event_category: 'whatsapp', event_label: source });
     });
   });
 
