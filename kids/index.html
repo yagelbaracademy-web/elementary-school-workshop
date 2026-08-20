@@ -42,12 +42,12 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"מה ייחודי בסדנת ילדים ברשת?","acceptedAnswer":{"@type":"Answer","text":"הסדנה מגיעה מבפנים. יגל בר, יוצר תוכן עם 7+ שנות ניסיון ביצירת תכנים שהגיעו לעשרות מיליוני צפיות, מסביר לילדים איך הרשתות עובדות מאחורי הקלעים — עם דוגמאות מעולמם של הילדים ובשפה שהם מבינים."}},
-      {"@type":"Question","name":"לאיזה מסגרות מתאימה הסדנה?","acceptedAnswer":{"@type":"Answer","text":"בתי ספר יסודיים (כיתות ג'-ו'), מתנ\"סים ומרכזים חברתיים, עיריות ומועצות אזוריות, קייטנות וערבי הורים. מוזמנת בדרך כלל על ידי מנהלי בתי ספר, יועצות ויועצים חינוכיים, רכזי מוגנות ותקשוב ומנהלי אגפי חינוך בעיריות."}},
-      {"@type":"Question","name":"האם התוכן מותאם לגיל הילדים?","acceptedAnswer":{"@type":"Answer","text":"כן. הסדנה נבנתה במיוחד לגיל בית הספר היסודי, כיתות ג'-ו', ומכוונת לפני כל מפגש לשכבת הגיל הספציפית."}},
-      {"@type":"Question","name":"האם ניתן לממן דרך תקציב גפן?","acceptedAnswer":{"@type":"Answer","text":"כן. הסדנה מאושרת רשמית למימון דרך תקציב גפ\"ן — מספר תוכנית 70107."}},
+      {"@type":"Question","name":"מה ייחודי בסדנת ילדים ברשת?","acceptedAnswer":{"@type":"Answer","text":"הסדנה מגיעה מבפנים. יגל בר, יוצר תוכן עם 7+ שנות ניסיון ביצירת תכנים שהגיעו לעשרות מיליוני צפיות, מסביר לילדים איך הרשתות עובדות מאחורי הקלעים - עם דוגמאות מעולמם של הילדים ובשפה שהם מבינים."}},
+      {"@type":"Question","name":"לאיזה מסגרות מתאימה הסדנה?","acceptedAnswer":{"@type":"Answer","text":"בתי ספר יסודיים (כיתות ג׳-ו׳), מתנ\"סים ומרכזים חברתיים, עיריות ומועצות אזוריות, קייטנות וערבי הורים. מוזמנת בדרך כלל על ידי מנהלי בתי ספר, יועצות ויועצים חינוכיים, רכזי מוגנות ותקשוב ומנהלי אגפי חינוך בעיריות."}},
+      {"@type":"Question","name":"האם התוכן מותאם לגיל הילדים?","acceptedAnswer":{"@type":"Answer","text":"כן. הסדנה נבנתה במיוחד לגיל בית הספר היסודי, כיתות ג׳-ו׳, ומכוונת לפני כל מפגש לשכבת הגיל הספציפית."}},
+      {"@type":"Question","name":"האם ניתן לממן דרך תקציב גפן?","acceptedAnswer":{"@type":"Answer","text":"כן. הסדנה מאושרת רשמית למימון דרך תקציב גפ\"ן - מספר תוכנית 70107."}},
       {"@type":"Question","name":"כמה זמן נמשכת הסדנה?","acceptedAnswer":{"@type":"Answer","text":"מפגש חד-פעמי נמשך כשעה. ניתן גם להזמין סדרת מפגשים מעמיקה לפי הצורך ולוח הזמנים של בית הספר."}},
-      {"@type":"Question","name":"לכמה תלמידים אפשר בבת אחת?","acceptedAnswer":{"@type":"Answer","text":"גמיש לחלוטין — אפשר להזמין לכיתה בודדת, לשכבה שלמה, ואפילו לכל בית הספר."}},
+      {"@type":"Question","name":"לכמה תלמידים אפשר בבת אחת?","acceptedAnswer":{"@type":"Answer","text":"גמיש לחלוטין - אפשר להזמין לכיתה בודדת, לשכבה שלמה, ואפילו לכל בית הספר."}},
       {"@type":"Question","name":"כמה זמן מראש כדאי להזמין את הסדנה?","acceptedAnswer":{"@type":"Answer","text":"מומלץ ליצור קשר מוקדם ככל האפשר, במיוחד סביב תחילת שנת הלימודים כשהמועדים מתמלאים מהר."}}
     ]
   }
@@ -111,7 +111,9 @@
       border-bottom: 1px solid rgba(0,0,0,.06);
     }
     .nav-inner { max-width: var(--max-wide); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { font-size: 15px; font-weight: 700; color: var(--text); letter-spacing: -.01em; }
+    .nav-logo { font-size: 15px; font-weight: 500; color: var(--text); letter-spacing: -.01em; }
+    .nav-logo strong { font-weight: 900; }
+    .nav-logo .nav-logo-sep { color: rgba(0,0,0,.3); margin: 0 6px; font-weight: 400; }
     .nav-sep { display: inline-block; width: 1px; height: 13px; background: rgba(0,0,0,.18); margin: 0 10px; vertical-align: middle; }
     .nav-cta { font-family: 'Heebo', sans-serif; font-size: 14px; font-weight: 700; color: var(--white); background: var(--orange); padding: 9px 22px; border-radius: 100px; border: none; cursor: pointer; transition: background .2s, transform .15s; }
     .nav-cta:hover { background: #C2460A; transform: translateY(-1px); }
@@ -120,51 +122,51 @@
     #hero {
       position: relative;
       min-height: 100svh;
-      display: flex; flex-direction: column; justify-content: flex-end;
-      padding: 0 24px 72px;
-      background: #000; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 132px 24px 72px;
+      background: radial-gradient(circle at 50% 0%, #FFFAF2 0%, #FBF1E3 50%, #F5EEE2 100%);
+      overflow: hidden;
     }
-    .hero-video {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center 22%; z-index: 0;
+    .hero-inner { position: relative; z-index: 2; max-width: 780px; margin: 0 auto; width: 100%; }
+    .hero-kicker {
+      font-size: clamp(17px, 2vw, 20px); font-weight: 700;
+      color: var(--text); letter-spacing: .01em;
+      max-width: 780px; margin: 0 auto 16px;
+      text-decoration: underline; text-underline-offset: 5px; text-decoration-color: rgba(17,17,17,.35);
     }
-    #hero::before {
-      content: ''; position: absolute; inset: 0; z-index: 1;
-      background: linear-gradient(180deg, rgba(0,0,0,.40) 0%, rgba(0,0,0,.40) 38%, rgba(0,0,0,.92) 100%);
-      pointer-events: none;
+    .hero-trustbar {
+      font-size: clamp(13px, 1.4vw, 14.5px); font-weight: 600;
+      color: var(--text-soft); line-height: 1.5;
+      max-width: 780px; margin: 2px auto 0;
     }
-    .hero-inner { position: relative; z-index: 2; max-width: 820px; margin: 0 auto; width: 100%; }
-    .hero-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 16px; }
-    .badge-gfn {
-      display: inline-flex; align-items: center; gap: 5px;
-      font-size: clamp(14px, 1.6vw, 16px);
-      font-weight: 800; letter-spacing: -.005em;
-      color: #fff;
-      padding: 9px 20px;
-      border-radius: 100px;
-      background: linear-gradient(90deg, #0FA968, #34E1A1);
-      box-shadow: 0 8px 24px rgba(52,225,161,.4), inset 0 0 0 1px rgba(255,255,255,.16);
-    }
-    #hero h1 { color: var(--white); margin-bottom: 0; text-shadow: 0 2px 20px rgba(0,0,0,.4); }
-    #hero h1 .accent { color: #ff8c5a; }
-    .hero-lead { font-size: clamp(15px, 1.5vw, 17px); font-weight: 500; color: rgba(255,255,255,.8); line-height: 1.6; max-width: 560px; margin: 18px 0 16px; text-shadow: 0 1px 10px rgba(0,0,0,.4); }
-    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+    #hero h1 { color: var(--text); margin-bottom: 0; }
+    #hero h1 .accent { color: var(--orange); }
+    .hero-divider { width: 64px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, var(--orange), var(--gold-warm)); margin: 24px auto; }
+    .hero-promise { font-size: clamp(19px, 2.4vw, 25px); font-weight: 700; color: var(--text); line-height: 1.6; max-width: 780px; margin: 0 auto 20px; }
+    .hero-promise strong { color: var(--orange); }
+    .hero-byline { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; margin: 4px auto 4px; }
+    .hero-byline-photo { width: 176px; height: 176px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 4px solid var(--white); box-shadow: 0 14px 32px rgba(0,0,0,.18); }
+    .hero-byline-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%; transform: scale(1.6); display: block; }
+    .hero-byline-name { font-size: clamp(14px, 1.5vw, 16px); font-weight: 600; color: var(--text-mid); }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
     .btn { display: inline-flex; align-items: center; gap: 8px; padding: 15px 32px; border-radius: 100px; font-weight: 700; font-size: 15px; transition: transform .2s, box-shadow .2s, background .2s; border: 0; cursor: pointer; font-family: inherit; }
+    .hero-cta-btn { padding: 12px 26px; font-size: 14px; }
     .btn-primary { background: var(--orange); color: var(--white); box-shadow: 0 6px 24px rgba(234,88,12,.36); }
     .btn-primary:hover { background: #C2460A; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(234,88,12,.44); }
     .btn-ghost { background: rgba(255,255,255,.10); color: var(--white); border: 1px solid rgba(255,255,255,.22); backdrop-filter: blur(4px); }
     .btn-ghost:hover { background: rgba(255,255,255,.18); transform: translateY(-1px); }
     .btn-dark { background: var(--text); color: var(--white); }
     .btn-dark:hover { background: #333; transform: translateY(-2px); }
-    .hero-scroll-cue { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 2px; color: rgba(255,255,255,.55); }
+    .hero-scroll-cue { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 2px; color: rgba(17,17,17,.35); }
     .hero-scroll-cue svg { width: 18px; height: 18px; animation: sc 1.7s ease-in-out infinite; }
     .hero-scroll-cue svg:first-child { opacity: .35; }
     .hero-scroll-cue svg:last-child { animation-delay: .18s; }
     @keyframes sc { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
     .sched-short { display: none; }
+    .br-mobile { display: none; }
     @media (max-width: 720px) {
-      #hero { min-height: 0; aspect-ratio: 3/4; padding-bottom: 32px; }
+      .br-mobile { display: block; }
+      #hero { min-height: 0; padding: 104px 20px 48px; }
       .hero-schedule { font-size: 14px; padding: 10px 18px; gap: 9px; white-space: nowrap; }
       .sched-long { display: none; }
       .sched-short { display: inline; }
@@ -182,27 +184,26 @@
 
     /* ── INTRO (הבעיה + נושאי הסדנה) ── */
     #intro { background: var(--bg); padding-top: 40px; }
-    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; max-width: var(--max-wide); margin: 0 auto; }
-    .intro-col-topics { display: flex; flex-direction: column; gap: 24px; }
+    .intro-grid { max-width: 720px; margin: 0 auto; }
     .intro-text h2 { margin-bottom: 20px; }
     .intro-text p { font-size: clamp(15px,1.6vw,17px); color: var(--text-mid); line-height: 1.8; margin-bottom: 16px; }
     .intro-text p strong { color: var(--text); }
-    .intro-photo { float: left; width: 190px; margin: 4px 0 18px 24px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 16px 36px rgba(0,0,0,.14); shape-outside: margin-box; }
-    .intro-photo img { width: 100%; height: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 20%; }
-    @media (min-width: 861px) { .intro-photo { display: none; } }
-    @media (max-width: 860px) { .intro-photo { float: none; width: 100%; max-width: 280px; margin: 0 auto 22px; } }
-    .intro-photo-wide { border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 16px 36px rgba(0,0,0,.14); aspect-ratio: 16/10; }
-    .intro-photo-wide img { width: 100%; height: 100%; object-fit: cover; object-position: center 8%; display: block; }
-    @media (max-width: 860px) { .intro-photo-wide { display: none; } }
+    .intro-text .intro-emphasis { font-size: clamp(24px, 3.2vw, 42px); font-weight: 800; line-height: 1.3; letter-spacing: -.02em; color: var(--text); margin-bottom: 22px; }
+    @media (min-width: 721px) { .intro-text .intro-emphasis { font-size: clamp(22px, 2vw, 30px); } }
+    .intro-avatar { width: 100%; max-width: 380px; aspect-ratio: 16/10; border-radius: var(--radius-lg); overflow: hidden; margin: 4px auto 24px; box-shadow: 0 12px 30px rgba(0,0,0,.16); border: 3px solid var(--white); }
+    .intro-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 12%; display: block; }
     .intro-form-wrap { max-width: 640px; margin: 44px auto 0; }
     .intro-form-wrap .contact-form { padding: 30px 28px; }
-    .topics-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 34px 30px; box-shadow: 0 10px 32px rgba(0,0,0,.05); }
-    .topics-card h3 { font-size: 18px; margin-bottom: 20px; }
-    .topics-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-    .topics-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--text-mid); line-height: 1.6; }
-    .topic-check { width: 22px; height: 22px; border-radius: 50%; background: var(--orange-soft); border: 1.5px solid rgba(234,88,12,.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-    .topic-check svg { width: 11px; height: 11px; fill: none; stroke: var(--orange); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-    @media (max-width: 860px) { .intro-grid { grid-template-columns: 1fr; gap: 36px; } }
+    .learn-section { max-width: var(--max-wide); margin: 56px auto 0; background: var(--bg-warm); border-radius: var(--radius-lg); padding: 36px 32px; }
+    .learn-heading { font-size: 20px; text-align: center; margin-bottom: 26px; }
+    .learn-badges { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .learn-badge { display: flex; flex-direction: column; align-items: center; text-align: center; background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 26px 22px; box-shadow: 0 6px 18px rgba(0,0,0,.04); transition: transform .25s, box-shadow .25s; }
+    .learn-badge:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.07); }
+    .learn-icon { width: 42px; height: 42px; border-radius: 12px; background: var(--orange-soft); border: 1.5px solid rgba(234,88,12,.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin: 0 auto 14px; }
+    .learn-icon svg { width: 20px; height: 20px; stroke: var(--orange); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .learn-badge h4 { font-size: 16.5px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+    .learn-badge p { font-size: 14px; color: var(--text-mid); line-height: 1.55; }
+    @media (max-width: 780px) { .learn-badges { grid-template-columns: 1fr; } }
 
     /* ── SECTION HEAD ── */
     .section-head { text-align: center; max-width: 760px; margin: 0 auto 56px; }
@@ -227,12 +228,13 @@
     .tauthor-role { font-size: 13px; color: var(--text-soft); }
 
     /* ── ABOUT ── */
-    #about { background: var(--bg); }
+    #about { background: var(--bg); padding-bottom: 64px; }
     .about-grid { display: grid; grid-template-columns: 280px 1fr; gap: 60px; align-items: start; max-width: var(--max-wide); margin: 0 auto; }
     .about-image { border-radius: 20px; overflow: hidden; aspect-ratio: 3/4; box-shadow: 0 20px 50px rgba(0,0,0,.12); position: sticky; top: 100px; }
     .about-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
-    .about-content h2 { margin-bottom: 8px; }
-    .about-role { font-size: 16px; color: var(--text-soft); margin-bottom: 28px; }
+    .about-content h2 { margin-bottom: 14px; }
+    .about-quickfacts { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 28px; }
+    .about-quickfacts li { font-size: 14px; font-weight: 600; color: var(--text-mid); background: var(--bg-warm); border: 1px solid var(--border); border-radius: 100px; padding: 7px 16px; }
     .about-content p { font-size: clamp(15px,1.5vw,17px); color: var(--text-mid); line-height: 1.8; margin-bottom: 16px; }
     .about-content p strong { color: var(--text); }
     .credentials { list-style: none; margin-top: 28px; display: flex; flex-direction: column; gap: 10px; }
@@ -411,19 +413,12 @@
       .section-nav { bottom: 16px; right: 6px; }
     }
 
-    /* ── WHATSAPP ALT (form) ── */
-    .btn-wa { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; margin-top: 12px; padding: 14px 22px; border-radius: 100px; background: #25D366; color: #fff; font-weight: 700; font-size: 15px; box-shadow: 0 6px 20px rgba(37,211,102,.3); transition: background .2s, transform .15s, box-shadow .2s; }
-    .btn-wa:hover { background: #1DA851; transform: translateY(-1px); box-shadow: 0 10px 26px rgba(37,211,102,.38); }
-    .btn-wa svg { width: 20px; height: 20px; fill: #fff; flex-shrink: 0; }
-
-    /* ── SCHEDULE NOTE (hero) ── */
+    /* ── SCHEDULE NOTE (form) ── */
     .hero-schedule {
-      display: inline-flex; align-items: center; gap: 11px; margin-top: 26px;
-      font-size: clamp(15px, 1.6vw, 17px); font-weight: 700; color: #fff;
-      background: rgba(0,0,0,.35); border: 1px solid rgba(52,225,161,.35);
-      padding: 12px 22px; border-radius: 100px;
-      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
-      text-shadow: 0 1px 8px rgba(0,0,0,.4);
+      display: inline-flex; align-items: center; gap: 11px; margin: 0 0 20px;
+      font-size: clamp(14px, 1.6vw, 16px); font-weight: 700; color: #166534;
+      background: #f0fdf4; border: 1px solid #86efac;
+      padding: 10px 20px; border-radius: 100px;
     }
     .hero-schedule .dot { width: 10px; height: 10px; border-radius: 50%; background: #34E1A1; box-shadow: 0 0 0 0 rgba(52,225,161,.6); animation: pulse 2s infinite; flex-shrink: 0; }
     @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(52,225,161,.55)} 70%{box-shadow:0 0 0 9px rgba(52,225,161,0)} 100%{box-shadow:0 0 0 0 rgba(52,225,161,0)} }
@@ -446,32 +441,83 @@
     @media (max-width: 800px) { .how-grid { grid-template-columns: 1fr; } }
 
   </style>
+
+  <!-- ═══ ניסיון: מרכוז כל הטקסט באתר (דמו בלבד, לא לאתר החי) ═══ -->
+  <style>
+    body, h1, h2, h3, p, li, span, a, label, div, .lead {
+      text-align: center !important;
+    }
+    /* אלמנטים עם תוכן ברשימות/כרטיסים - למרכז גם את השורה עצמה */
+    .fact-bullets li, .credentials li {
+      justify-content: center !important;
+      padding-right: 0 !important;
+    }
+    .credentials li::before, .fact-bullets li::before { display: none; }
+    .promise-check { margin: 0 auto; }
+    .promise { justify-content: center !important; }
+    /* בלוקים שממורכזים ברוחב - כדי שהטקסט הממורכז לא ייתקע לקצה */
+    .intro-text, .about-content, .cta-left,
+    .fact-row, .fact-value, .faq-a, .tquote-text, .credentials,
+    .promises, .media-logos-row, .footer-inner, .footer-right, .about-quickfacts {
+      margin-left: auto !important; margin-right: auto !important;
+      text-align: center !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+    .faq-btn { text-align: center !important; justify-content: center !important; }
+    .fact-row { grid-template-columns: 1fr !important; gap: 6px !important; }
+
+    /* ── נאב עליון ── */
+    .nav-inner { justify-content: center !important; gap: 20px; }
+
+    /* ── באדג'ים/אייקונים בהירו ── */
+    .hero-ctas { justify-content: center !important; }
+
+    /* ── אייקונים בכרטיסים (outcomes, how-it-works) - למרכז אותם בתוך הכרטיס ── */
+    .outcome-icon, .how-num { margin-left: auto !important; margin-right: auto !important; }
+    .outcome, .how-step { display: flex !important; flex-direction: column; align-items: center !important; }
+
+    /* ── לוגו בית ספר + שם ותפקיד הממליץ/ה - למרכז בתוך כרטיס ההמלצה ── */
+    .tschool-logo { left: 50% !important; transform: translateX(-50%) !important; }
+    .tauthor { flex-direction: column !important; justify-content: center !important; gap: 4px !important; }
+
+    /* ── תמונת יגל בסקשן "על המרצה" - למרכז ── */
+    .about-image { margin: 0 auto !important; }
+
+    /* ── חץ גלילה בין סקשנים ── */
+    .section-scroll-arrow { display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 6px 0 30px; color: var(--orange); }
+    .section-scroll-arrow svg { width: 26px; height: 26px; animation: sc 1.7s ease-in-out infinite; }
+    .section-scroll-arrow svg:nth-child(1) { opacity: .3; }
+    .section-scroll-arrow svg:nth-child(2) { opacity: .65; animation-delay: .15s; }
+    .section-scroll-arrow svg:nth-child(3) { opacity: 1; animation-delay: .3s; }
+  </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#hero" class="nav-logo">סדנת "ילדים ברשת"<span class="nav-sep"></span>יגל בר</a>
-    <a href="#cta" class="nav-cta">להזמנת הסדנה</a>
+    <a href="#hero" class="nav-logo"><strong>יגל בר</strong> <span class="nav-logo-sep">|</span> סדנת "ילדים ברשת"</a>
   </div>
 </nav>
 
 <!-- ══ HERO ══ -->
 <section id="hero">
-  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline poster="images/hero-loop-poster.jpg"></video>
-
   <div class="hero-inner reveal in">
-    <div class="hero-badges">
-      <span class="badge-gfn">✓ סדנה בגפ"ן 70107</span>
-    </div>
-    <h1>
-      התלמידים מגלים את הפסיכולוגיה<br>שמאחורי הרשתות החברתיות<br>
-      <span class="accent">ומקבלים כלים להתמודד<br>עם בריונות ולחץ חברתי.</span>
-    </h1>
-    <p class="hero-lead">
-      לתלמידי כיתות ג׳-ו׳ | סדנה חווייתית שמחזקת מוגנות, אקלים כיתתי וחשיבה ביקורתית.
+    <p class="hero-kicker">סדנה לבתי ספר יסודי, כיתות ג׳-ו׳ - בגפ"ן</p>
+    <h1>מה שקורה לילדים ברשת, לא נשאר שם.<br><span class="accent">זה מגיע לבית, לרחוב, לבית הספר.</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-promise">
+      סדנה חווייתית שנותנת לתלמידי יסודי כלים פרקטיים לזהות מניפולציות, פרסום סמוי והונאות AI, למנוע לחץ חברתי וחרם,<br> ולנהל שיח מכבד ברשת<br> <strong>- הכל בגובה העיניים ובשפה שלהם.</strong>
     </p>
+    <div class="hero-byline">
+      <div class="hero-byline-photo"><img src="images/yagel-podcast.jpg" alt="יגל בר"></div>
+      <span class="hero-byline-name">יגל בר · יוצר תוכן ויזם חברתי</span>
+    </div>
+    <p class="hero-trustbar">150M+ צפיות כיוצר תוכן &nbsp;|&nbsp; המלצות ממנהלות ואנשי חינוך</p>
+    <div class="hero-ctas">
+      <a href="#cta" class="btn btn-primary hero-cta-btn">בדקו התאמה לבית הספר</a>
+    </div>
   </div>
 
   <div class="hero-scroll-cue" aria-hidden="true">
@@ -480,37 +526,46 @@
   </div>
 </section>
 
-<!-- ══ INTRO — הבעיה + נושאי הסדנה ══ -->
+<!-- ══ INTRO - הבעיה + נושאי הסדנה ══ -->
 <section id="intro">
   <div class="container-wide">
     <div class="intro-grid">
       <div class="intro-text reveal in">
-        <h2>מה שקורה ברשת לא נשאר ברשת.<br>זה מגיע לבית, לרחוב, לבית הספר.</h2>
-        <div class="intro-photo"><img src="images/hero-kids.png" alt="ילד מסתכל בטלפון, ברקע ילדות מצחקקות"></div>
-        <p>מי שעובד עם ילדים רואה את זה - חרמות, בריונות, לחץ חברתי, זמן מסך מוגזם, טרנדים בעייתיים שמגיעים לכיתה.</p>
-        <p><strong>הילדים צריכים מישהו שיעזור להם להבין את עולם הדיגיטל ויתן להם כלים להתמודד עם האתגרים בו. מישהו שחי את העולם הזה.</strong></p>
-        <p>אני יוצר תוכן עם מעל <strong style="color:var(--orange)">150 מיליון צפיות</strong>, למותגים, עמותות ומשפיענים מוכרים. בסדנה אני חושף בפני התלמידים את <strong>המנגנונים מאחורי הקלעים</strong> שמשפיעים עליהם, ואף אחד לא רוצה שיכירו.</p>
+        <p class="intro-emphasis">הילדים צריכים מישהו שיעזור להם להבין<br class="br-mobile"> את עולם הדיגיטל ויתן להם כלים להתמודד עם האתגרים בו.<br class="br-mobile"> מישהו שחי את העולם הזה.</p>
+        <div class="intro-avatar"><img src="images/hero-kids.png" alt="תלמיד מביט בטלפון בזמן שחברות לועגות לו ברקע"></div>
+        <p>אני יוצר תוכן עם מעל <strong style="color:var(--orange)">150 מיליון צפיות</strong>,<br class="br-mobile"> למותגים, עמותות ומשפיענים מוכרים.<br class="br-mobile"> בסדנה אני חושף בפני התלמידים<br class="br-mobile"> את <strong>המנגנונים מאחורי הקלעים</strong> שמשפיעים עליהם.</p>
       </div>
-      <div class="intro-col-topics">
-        <div class="topics-card reveal reveal-d1 in">
-          <h3>נושאי הסדנה</h3>
-          <ul class="topics-list">
-            <li><span class="topic-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>אלימות ברשת, שיימינג ולחץ חברתי בעולם הדיגיטלי</li>
-            <li><span class="topic-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>איך רשתות חברתיות באמת עובדות — מנגנוני ההשפעה שנוצרו למשוך את תשומת הלב שלנו</li>
-            <li><span class="topic-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>משפיענים, טרנדים ופרסום סמוי — איך לזהות כשמנסים להשפיע עלינו, ומה מומלץ לעשות</li>
-            <li><span class="topic-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>תקשורת מכבדת בצ'אטים, במשחקים וברשתות החברתיות</li>
-            <li><span class="topic-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>איך לזהות טרנד חיובי לעומת טרנד שעלול לסכן או לפגוע</li>
-            <li><span class="topic-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>שמירה על פרטיות ובטיחות ברשת</li>
-          </ul>
+    </div>
+    <div class="learn-section reveal reveal-d1 in">
+      <h3 class="learn-heading">מה הילדים לומדים בסדנה</h3>
+      <div class="learn-badges">
+        <div class="learn-badge reveal reveal-d1 in">
+          <div class="learn-icon"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a6 6 0 0 0-4 10.5c.6.5 1 1.3 1 2.1V16h6v-1.4c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 2z"/></svg></div>
+          <div class="learn-text">
+            <h4>להבין</h4>
+            <p>איך רשתות חברתיות, משפיענים ותוכן ברשת<br class="br-mobile"> מנסים להשפיע על הדעות, הרגשות וההחלטות שלהם</p>
+          </div>
         </div>
-        <div class="intro-photo-wide reveal reveal-d2 in">
-          <img src="images/hero-kids.png" alt="ילד מסתכל בטלפון, ברקע ילדות מצחקקות">
+        <div class="learn-badge reveal reveal-d2 in">
+          <div class="learn-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div class="learn-text">
+            <h4>לזהות</h4>
+            <p>לחץ חברתי, בריונות ושיימינג,<br class="br-mobile"> פרסום סמוי וטרנדים או סיטואציות שעלולות לפגוע בהם</p>
+          </div>
+        </div>
+        <div class="learn-badge reveal reveal-d3 in">
+          <div class="learn-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <div class="learn-text">
+            <h4>לדעת מה לעשות</h4>
+            <p>כשהם נפגעים, כשחבר נפגע,<br class="br-mobile"> או כשכולם סביבם עושים משהו שהם לא בטוחים לגביו</p>
+          </div>
         </div>
       </div>
     </div>
     <div class="intro-form-wrap reveal in">
       <div class="contact-form">
         <h3>בדקו התאמה לבית הספר שלכם</h3>
+        <div class="hero-schedule"><span class="dot"></span>נפתח תיאום מועדים <span class="sched-long">לשנת הלימודים</span><span class="sched-short">לשנה"ל</span> תשפ"ז</div>
         <form class="js-contact-form" action="https://formspree.io/f/mlgzapeo" method="POST" novalidate>
           <input type="hidden" name="_next" value="https://workshop.yagelbar.com/kids/thank-you/">
           <div class="form-row">
@@ -519,29 +574,21 @@
               <input type="text" id="f-name-a" name="name" placeholder="ישראל ישראלי" required>
             </div>
             <div class="fg">
-              <label for="f-school-a">שם בית הספר</label>
-              <input type="text" id="f-school-a" name="school" placeholder="בית ספר..." required>
+              <label for="f-email-a">אימייל</label>
+              <input type="email" id="f-email-a" name="email" placeholder="name@example.com" required>
             </div>
           </div>
           <div class="form-row">
             <div class="fg">
-              <label for="f-role-a">תפקיד</label>
-              <input type="text" id="f-role-a" name="role" placeholder="מנהל/ת, יועץ/ת, הורה..." required>
+              <label for="f-school-a">שם בית הספר</label>
+              <input type="text" id="f-school-a" name="school" placeholder="בית ספר..." required>
             </div>
             <div class="fg">
               <label for="f-phone-a">טלפון</label>
               <input type="tel" id="f-phone-a" name="phone" placeholder="05X-XXXXXXX" required>
             </div>
           </div>
-          <div class="fg">
-            <label for="f-msg-a">מה הכי מעניין אתכם לשמוע?</label>
-            <textarea id="f-msg-a" name="message" placeholder="ספרו לנו קצת על בית הספר שלכם..."></textarea>
-          </div>
           <button type="submit" class="btn-submit">אשמח לשמוע עוד על הסדנה</button>
-          <a href="https://wa.me/972506807708?text=%D7%94%D7%99%D7%99%20%D7%99%D7%92%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A1%D7%93%D7%A0%D7%AA%20%22%D7%99%D7%9C%D7%93%D7%99%D7%9D%20%D7%91%D7%A8%D7%A9%D7%AA%22%20%D7%9C%D7%91%D7%99%D7%AA%20%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A9%D7%9C%D7%A0%D7%95" target="_blank" rel="noopener" class="btn-wa">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            מעדיפים וואטסאפ? שלחו הודעה
-          </a>
         </form>
       </div>
     </div>
@@ -561,7 +608,7 @@
       <article class="testimonial reveal in">
         <div class="tschool-logo"><img src="images/logo-school-gnandim-herzliya.png" alt="לוגו בית ספר ברנדיס הרצליה"></div>
         <div class="tquote-mark">״</div>
-        <p class="tquote-text">תוכנית חשובה, רלוונטית ומעצימה. <mark>חושפת את התלמידים באופן חווייתי להשפעות הרגשיות והחברתיות של תכנים ברשתות.</mark> מומלצת מאוד לשילוב בבית הספר.</p>
+        <p class="tquote-text">תוכנית חשובה, רלוונטית ומעצימה.<br class="br-mobile"> <mark>חושפת את התלמידים באופן חווייתי<br class="br-mobile"> להשפעות הרגשיות והחברתיות של תכנים ברשתות.</mark><br class="br-mobile"> מומלצת מאוד לשילוב בבית הספר.</p>
         <div class="tauthor">
           <div>
             <div class="tauthor-name">ליאת</div>
@@ -573,7 +620,7 @@
       <article class="testimonial reveal reveal-d1 in">
         <div class="tschool-logo"><img src="images/logo-school-ofek-hinuchi.png" alt="לוגו אופק חינוכי"></div>
         <div class="tquote-mark">״</div>
-        <p class="tquote-text">יגל <mark>מעצים את הילדים לחשוב באופן ביקורתי על מה שהם צורכים ברשת.</mark> מחזק תחושת מסוגלות ושייכות, בשפה נגישה, מכבדת ומרתקת.</p>
+        <p class="tquote-text">יגל <mark>מעצים את הילדים לחשוב באופן ביקורתי<br class="br-mobile"> על מה שהם צורכים ברשת.</mark><br class="br-mobile"> מחזק תחושת מסוגלות ושייכות,<br class="br-mobile"> בשפה נגישה, מכבדת ומרתקת.</p>
         <div class="tauthor">
           <div>
             <div class="tauthor-name">טליה בן דוד</div>
@@ -585,7 +632,7 @@
       <article class="testimonial reveal reveal-d2 in">
         <div class="tschool-logo"><img src="images/logo-school-avnei-hachoshen-shoham.png" alt="לוגו בית חינוך אבני החושן שוהם"></div>
         <div class="tquote-mark">״</div>
-        <p class="tquote-text">תוכנית חינוכית-חברתית משמעותית. <mark>מעניקה לתלמידים כלים לחשיבה ביקורתית, אחריות אישית ושמירה על גבולות ופרטיות.</mark> ממליצה מאוד.</p>
+        <p class="tquote-text">תוכנית חינוכית-חברתית משמעותית.<br class="br-mobile"> <mark>מעניקה לתלמידים כלים לחשיבה ביקורתית,<br class="br-mobile"> אחריות אישית ושמירה על גבולות ופרטיות.</mark><br class="br-mobile"> ממליצה מאוד.</p>
         <div class="tauthor">
           <div>
             <div class="tauthor-name">מירהבל כהן</div>
@@ -594,9 +641,6 @@
         </div>
       </article>
 
-    </div>
-    <div class="reveal in" style="display:flex; justify-content:center; margin-top:32px;">
-      <div class="hero-schedule"><span class="dot"></span>נפתח תיאום מועדים <span class="sched-long">לשנת הלימודים</span><span class="sched-short">לשנה"ל</span> תשפ"ז</div>
     </div>
   </div>
 </section>
@@ -607,7 +651,7 @@
   <div class="proof-overlay">
     <div class="proof-caption">
       <h3>שכבה שלמה. קשב מלא.</h3>
-      <p>מתוך סדנה של יגל בבית ספר — ככה זה נראה כשמדברים עם תלמידים בשפה שלהם.</p>
+      <p>מתוך סדנה של יגל בבית ספר - ככה זה נראה כשמדברים עם תלמידים בשפה שלהם.</p>
     </div>
   </div>
 </section>
@@ -621,20 +665,29 @@
       </div>
       <div class="about-content reveal reveal-d1 in">
         <h2>יגל בר</h2>
-        <p class="about-role">יוצר תוכן, יזם חברתי ומנחה סדנאות</p>
-        <p>במשך שנים עבדתי בעולם התוכן והרשתות החברתיות. יצרתי תכנים שהגיעו למעל 150 מיליון צפיות, וראיתי מקרוב כמה חזק התוכן משפיע על הדרך שבה ילדים חושבים, מדברים ומתנהגים.</p>
-        <p>הבנתי שמה שחסר לילדים הוא מישהו שיעזור להם להבין <strong>איך העולם הזה באמת עובד</strong>, וייתן להם כלים לנווט בו בעצמם — דרך שיחה פתוחה, בשפה שלהם.</p>
+        <ul class="about-quickfacts">
+          <li>יוצר תוכן ויזם חברתי</li>
+          <li>7+ שנות ניסיון בעולם התוכן</li>
+          <li>150M+ צפיות</li>
+          <li>מנחה סדנאות בבתי ספר</li>
+        </ul>
+        <p>במשך שנים אני עובד בעולם התוכן והרשתות החברתיות,<br class="br-mobile"> ורואה מקרוב כמה חזק תוכן משפיע<br class="br-mobile"> על הדרך שבה ילדים חושבים, מדברים ומתנהגים.</p>
+        <p>הבנתי שמה שחסר לילדים זה מישהו<br class="br-mobile"> שיעזור להם להבין <strong>איך העולם הזה באמת עובד</strong>,<br class="br-mobile"> וייתן להם כלים לנווט בו בעצמם - דרך מפגש חווייתי, בשפה שלהם.</p>
         <ul class="credentials">
-          <li>יוצר תוכן עם מעל <strong>150 מיליון צפיות</strong></li>
-          <li>מנחה סדנאות בבתי ספר יסודי, חטיבה ותיכון</li>
           <li>מייסד <strong>"לזכרם"</strong> - מיזם לאומי להנצחת נופלי ישראל</li>
           <li><strong>בוגר ניהול מוצר, הטכניון</strong></li>
-          <li>משלב כלים מגישת <strong>DBT</strong> לפיתוח חוסן רגשי, וחיזוק תקשורת בינאישית</li>
+          <li>משלב כלים מגישת <strong>DBT</strong><br class="br-mobile"> לפיתוח חוסן רגשי, וחיזוק תקשורת בינאישית</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
+
+<div class="section-scroll-arrow" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
 
 <!-- ══ OUTCOMES ══ -->
 <section id="outcomes" class="warm">
@@ -648,32 +701,32 @@
       <div class="outcome reveal in">
         <div class="outcome-icon"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><line x1="6.7" y1="7.2" x2="10.5" y2="16.3"/><line x1="17.3" y1="7.2" x2="13.5" y2="16.3"/><line x1="7" y1="6" x2="17" y2="6"/></svg></div>
         <h3>הבנה של איך רשתות חברתיות עובדות</h3>
-        <p>מאחורי כל סרטון, טרנד ואפליקציה יש פסיכולוגיה מחושבת. הילדים יוצאים עם הבנה של המנגנונים האמיתיים.</p>
+        <p>מאחורי כל סרטון, טרנד ואפליקציה<br class="br-mobile"> יש פסיכולוגיה מחושבת.<br class="br-mobile"> הילדים יוצאים עם הבנה של המנגנונים האמיתיים.</p>
       </div>
       <div class="outcome reveal reveal-d1 in">
         <div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9.5 3.5a3 3 0 0 0-3 3 2.7 2.7 0 0 0-2 2.6c0 .5.13.96.36 1.36A2.8 2.8 0 0 0 3.5 13c0 1.06.6 1.98 1.48 2.44A2.6 2.6 0 0 0 5 16.5 2.5 2.5 0 0 0 7.5 19c.2 0 .4-.02.58-.06A2.5 2.5 0 0 0 10.5 21c1.1 0 2-.78 2.2-1.82.2.04.4.06.6.06V4.3a3 3 0 0 0-3.8-.8Z"/><path d="M14.5 3.5a3 3 0 0 1 3 3 2.7 2.7 0 0 1 2 2.6c0 .5-.13.96-.36 1.36A2.8 2.8 0 0 1 20.5 13c0 1.06-.6 1.98-1.48 2.44.03.18.05.37.05.56A2.5 2.5 0 0 1 16.5 19a2.5 2.5 0 0 1-2.42-1.06 2.5 2.5 0 0 1-.78.06V4.3a3 3 0 0 1 1.2-.8Z"/></svg></div>
         <h3>חשיבה ביקורתית ואחריות אישית</h3>
-        <p>משפיענים, פרסום סמוי, לחץ חברתי ברשת — הם לומדים לזהות בזמן אמת כשמנסים להשפיע עליהם, ואיך לפעול.</p>
+        <p>משפיענים, פרסום סמוי, לחץ חברתי ברשת<br class="br-mobile"> - הם לומדים לזהות בזמן אמת<br class="br-mobile"> כשמנסים להשפיע עליהם, ואיך לפעול.</p>
       </div>
       <div class="outcome reveal reveal-d2 in">
         <div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>דרכי התמודדות עם בריונות ולחץ</h3>
-        <p>שיחה פתוחה על מה שקורה בצ'אטים ובקבוצות: איך מגיבים כשנפגעים, מה עושים כשחבר נפגע, ואיך לא להיות חלק מהבעיה.</p>
+        <p>שיחה פתוחה על מה שקורה בצ'אטים ובקבוצות:<br class="br-mobile"> איך מגיבים כשנפגעים, מה עושים כשחבר נפגע,<br class="br-mobile"> ואיך לא להיות חלק מהבעיה.</p>
       </div>
       <div class="outcome reveal in">
         <div class="outcome-icon"><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
         <h3>שמירה על גבולות ופרטיות</h3>
-        <p>כלים מעשיים לשמירה על עצמם ברשת — מה לשתף ומה לא, ואיך להגיב לסיטואציות שמרגישות לא בסדר.</p>
+        <p>כלים מעשיים לשמירה על עצמם ברשת<br class="br-mobile"> - מה לשתף ומה לא,<br class="br-mobile"> ואיך להגיב לסיטואציות שמרגישות לא בסדר.</p>
       </div>
       <div class="outcome reveal reveal-d1 in">
         <div class="outcome-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="15 9 12.5 12.5 9 15 11.5 11.5 15 9"/></svg></div>
         <h3>תחושת מסוגלות ובחירה</h3>
-        <p>הילדים יוצאים עם הבנה שיש להם בחירה — גם כשיש לחץ, גם כשכולם עושים אחרת. ושהבחירות שלהם ברשת באמת משנות.</p>
+        <p>הילדים יוצאים עם הבנה שיש להם בחירה<br class="br-mobile"> - גם כשיש לחץ, גם כשכולם עושים אחרת.<br class="br-mobile"> ושהבחירות שלהם ברשת באמת משנות.</p>
       </div>
       <div class="outcome reveal reveal-d2 in">
         <div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
         <h3>מבט אחר על הרשת</h3>
-        <p>הסדנה מעצימה: הילדים מגלים שרשתות חברתיות יכולות גם לחבר, לרגש ולהשפיע לטובה — ושגם להם יש מקום להשפיע בה.</p>
+        <p>הסדנה מעצימה: הילדים מגלים<br class="br-mobile"> שרשתות חברתיות יכולות גם לחבר, לרגש ולהשפיע לטובה<br class="br-mobile"> - ושגם להם יש מקום להשפיע בה.</p>
       </div>
     </div>
   </div>
@@ -704,7 +757,7 @@
       </div>
       <div class="fact-row">
         <span class="fact-label">פורמט</span>
-        <span class="fact-value">מפגש חווייתי ואינטראקטיבי — דוגמאות חיות מהרשת, טרנדים שהילדים מכירים, ושיח פתוח עם התלמידים לאורך כל המפגש</span>
+        <span class="fact-value">מפגש חווייתי ואינטראקטיבי<br class="br-mobile"> - דוגמאות חיות מהרשת, טרנדים שהילדים מכירים,<br class="br-mobile"> ושיח פתוח עם התלמידים לאורך כל המפגש</span>
       </div>
       <div class="fact-row">
         <span class="fact-label">מימון</span>
@@ -712,14 +765,14 @@
       </div>
       <div class="fact-row">
         <span class="fact-label">מספר תוכנית בגפ"ן</span>
-        <span class="fact-value">70107</span>
+        <span class="fact-value green">70107</span>
       </div>
       <div class="fact-row">
         <span class="fact-label">אפשרויות נוספות</span>
         <span class="fact-value">
           <ul class="fact-bullets">
-            <li>סדנה נפרדת להורים — כלים להמשיך את השיחה בבית</li>
-            <li>סדנה לצוות החינוכי — כיצד לתמוך בתלמידים</li>
+            <li>סדנה נפרדת להורים - כלים להמשיך את השיחה בבית</li>
+            <li>סדנה לצוות החינוכי - כיצד לתמוך בתלמידים</li>
           </ul>
         </span>
       </div>
@@ -738,17 +791,17 @@
       <div class="how-step reveal in">
         <div class="how-num">1</div>
         <h3>משאירים פרטים</h3>
-        <p>בטופס כאן למטה או בהודעת וואטסאפ — מה שנוח לכם. נחזור אליכם בהקדם.</p>
+        <p>בטופס כאן למטה או בהודעת וואטסאפ<br class="br-mobile"> - מה שנוח לכם. נחזור אליכם בהקדם.</p>
       </div>
       <div class="how-step reveal reveal-d1 in">
         <div class="how-num">2</div>
         <h3>שיחת היכרות קצרה</h3>
-        <p>נדבר על בית הספר, הצרכים והמועדים — ותקבלו הצעה מסודרת, כולל כל מה שצריך.</p>
+        <p>נדבר על בית הספר, הצרכים והמועדים<br class="br-mobile"> - ותקבלו הצעה מסודרת, כולל כל מה שצריך.</p>
       </div>
       <div class="how-step reveal reveal-d2 in">
         <div class="how-num">3</div>
         <h3>הסדנה אצלכם</h3>
-        <p>יגל מגיע לבית הספר עם כל הציוד. אתם רק דואגים לאולם ומקרן — והתלמידים מקבלים מפגש בלתי נשכח.</p>
+        <p>יגל מגיע לבית הספר עם כל הציוד.<br class="br-mobile"> אתם רק דואגים לאולם ומקרן<br class="br-mobile"> - והתלמידים מקבלים מפגש בלתי נשכח.</p>
       </div>
     </div>
   </div>
@@ -766,70 +819,70 @@
           <span class="faq-q">מה ייחודי בסדנת "ילדים ברשת"?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">הסדנה מגיעה מבפנים. יגל בר - יוצר תוכן עם 7+ שנות ניסיון ביצירת תכנים שהגיעו לעשרות מיליוני צפיות - מסביר לילדים איך הרשתות עובדות מאחורי הקלעים. עם דוגמאות מעולמם של הילדים, ובשפה שהם מבינים. זה מפגש שעוזר לתלמידים להבין את העולם הדיגיטלי, ונותן להם כלים חשובים להתמודדות עם האתגרים בו.</p>
+        <p class="faq-a">הסדנה מגיעה מבפנים. יגל בר - יוצר תוכן עם 7+ שנות ניסיון ביצירת תכנים שהגיעו לעשרות מיליוני צפיות<br class="br-mobile"> - מסביר לילדים איך הרשתות עובדות מאחורי הקלעים. עם דוגמאות מעולמם של הילדים, ובשפה שהם מבינים.<br class="br-mobile"> זה מפגש שעוזר לתלמידים להבין את העולם הדיגיטלי, ונותן להם כלים חשובים להתמודדות עם האתגרים בו.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
           <span class="faq-q">לאיזה מסגרות מתאימה הסדנה?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">הסדנה מתאימה לבתי ספר יסודיים (כיתות ג'-ו'), מתנ"סים ומרכזים חברתיים, עיריות ומועצות אזוריות, קייטנות וערבי הורים. בדרך כלל מוזמנת על ידי מנהלות ומנהלי בתי ספר, יועצות ויועצים חינוכיים, רכזות ורכזי מוגנות ותקשוב, מנהלי אגפי חינוך בעיריות ומנהלי מתנ"סים.</p>
+        <p class="faq-a">הסדנה מתאימה לבתי ספר יסודיים (כיתות ג׳-ו׳), מתנ"סים ומרכזים חברתיים,<br class="br-mobile"> עיריות ומועצות אזוריות, קייטנות וערבי הורים. בדרך כלל מוזמנת על ידי מנהלות ומנהלי בתי ספר, יועצות ויועצים חינוכיים,<br class="br-mobile"> רכזות ורכזי מוגנות ותקשוב, מנהלי אגפי חינוך בעיריות ומנהלי מתנ"סים.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
           <span class="faq-q">האם התוכן מותאם לגיל של הילדים שלנו?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">כן. הסדנה נבנתה במיוחד לגיל בית הספר היסודי (כיתות ג'-ו'), עם דוגמאות, שפה וקצב שמתאימים לגיל הזה. לפני כל סדנה יש שיחת היכרות קצרה שבה מכוונים את התכנים בדיוק לשכבת הגיל ולאופי הכיתות.</p>
+        <p class="faq-a">כן. הסדנה נבנתה במיוחד לגיל בית הספר היסודי (כיתות ג׳-ו׳),<br class="br-mobile"> עם דוגמאות, שפה וקצב שמתאימים לגיל הזה.<br class="br-mobile"> לפני כל סדנה יש שיחת היכרות קצרה<br class="br-mobile"> שבה מכוונים את התכנים בדיוק לשכבת הגיל ולאופי הכיתות.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
           <span class="faq-q">כמה זמן נמשכת הסדנה?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">מפגש חד-פעמי נמשך כשעה. ניתן גם להזמין סדרת מפגשים מעמיקה לפי הצורך ולוח הזמנים של בית הספר.</p>
+        <p class="faq-a">מפגש חד-פעמי נמשך כשעה.<br class="br-mobile"> ניתן גם להזמין סדרת מפגשים מעמיקה<br class="br-mobile"> לפי הצורך ולוח הזמנים של בית הספר.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
           <span class="faq-q">לכמה תלמידים אפשר בבת אחת?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">גמיש לחלוטין — אפשר להזמין לכיתה בודדת, לשכבה שלמה, ואפילו לכל בית הספר.</p>
+        <p class="faq-a">גמיש לחלוטין - אפשר להזמין לכיתה בודדת, לשכבה שלמה, ואפילו לכל בית הספר.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
           <span class="faq-q">האם ניתן לממן דרך תקציב גפן?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">כן. הסדנה מאושרת רשמית למימון דרך תקציב גפ"ן — מספר תוכנית 70107. אפשר לאתר אותה ישירות בקטלוג התוכניות.</p>
+        <p class="faq-a">כן. הסדנה מאושרת רשמית<br class="br-mobile"> למימון דרך תקציב גפ"ן - מספר תוכנית 70107.<br class="br-mobile"> אפשר לאתר אותה ישירות בקטלוג התוכניות.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
           <span class="faq-q">כמה עולה הסדנה?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">כל הצעה נבנית אישית לפי היקף הסדנה ומספר התלמידים. הסדנה מאושרת לגפ"ן, מה שמפשט את התהליך. צרו קשר ונבנה יחד.</p>
+        <p class="faq-a">כל הצעה נבנית אישית<br class="br-mobile"> לפי היקף הסדנה ומספר התלמידים.<br class="br-mobile"> הסדנה מאושרת לגפ"ן, מה שמפשט את התהליך.<br class="br-mobile"> צרו קשר ונבנה יחד.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
           <span class="faq-q">האם אפשר לקבל סדנה גם להורים או לצוות המורים?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">בוודאי. ניתן להזמין סדנה נפרדת להורים או לצוות החינוכי, שנותנת כלים להמשיך את השיחה בבית ובכיתה.</p>
+        <p class="faq-a">בוודאי. ניתן להזמין סדנה נפרדת<br class="br-mobile"> להורים או לצוות החינוכי,<br class="br-mobile"> שנותנת כלים להמשיך את השיחה בבית ובכיתה.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
           <span class="faq-q">כמה זמן מראש כדאי להזמין?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">מומלץ ליצור קשר מוקדם ככל האפשר, במיוחד סביב תחילת שנת הלימודים כשהמועדים מתמלאים מהר. אין בעיה לתאם גם באמצע השנה — פשוט ככל שפונים מוקדם יותר, קל יותר למצוא את התאריך שהכי מתאים לבית הספר.</p>
+        <p class="faq-a">מומלץ ליצור קשר מוקדם ככל האפשר,<br class="br-mobile"> במיוחד סביב תחילת שנת הלימודים כשהמועדים מתמלאים מהר.<br class="br-mobile"> אין בעיה לתאם גם באמצע השנה<br class="br-mobile"> - פשוט ככל שפונים מוקדם יותר,<br class="br-mobile"> קל יותר למצוא את התאריך שהכי מתאים לבית הספר.</p>
       </div>
       <div class="faq-item reveal in">
         <button class="faq-btn" aria-expanded="false">
           <span class="faq-q">איך מתחילים?</span>
           <span class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <p class="faq-a">השאירו פרטים בטופס למטה או שלחו הודעת וואטסאפ. נחזור אליכם לשיחת היכרות קצרה וללא עלות, שבה נבחן יחד את הצרכים של בית הספר.</p>
+        <p class="faq-a">השאירו פרטים בטופס למטה<br class="br-mobile"> או שלחו הודעת וואטסאפ.<br class="br-mobile"> נחזור אליכם לשיחת היכרות קצרה וללא עלות,<br class="br-mobile"> שבה נבחן יחד את הצרכים של בית הספר.</p>
       </div>
     </div>
   </div>
@@ -841,7 +894,7 @@
     <div class="cta-left reveal in">
       <div class="cta-photo"><img src="images/yagel-lecture-circle.jpg" alt="יגל בר מרצה בסדנה מול תלמידים"></div>
       <h2>רוצים לשמוע יותר?<br>בואו נדבר.</h2>
-      <p>השאירו פרטים ונחזור אליכם בהקדם לתיאום שיחת היכרות. המועדים לשנת הלימודים תשפ"ז מתואמים בימים אלה — שווה לשריין מוקדם.</p>
+      <p>השאירו פרטים ונחזור אליכם בהקדם<br class="br-mobile"> לתיאום שיחת היכרות.<br class="br-mobile"> המועדים לשנת הלימודים תשפ"ז מתואמים בימים אלה<br class="br-mobile"> - שווה לשריין מוקדם.</p>
       <div class="promises">
         <div class="promise">
           <div class="promise-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -872,29 +925,21 @@
               <input type="text" id="f-name-b" name="name" placeholder="ישראל ישראלי" required>
             </div>
             <div class="fg">
-              <label for="f-school-b">שם בית הספר</label>
-              <input type="text" id="f-school-b" name="school" placeholder="בית ספר..." required>
+              <label for="f-email-b">אימייל</label>
+              <input type="email" id="f-email-b" name="email" placeholder="name@example.com" required>
             </div>
           </div>
           <div class="form-row">
             <div class="fg">
-              <label for="f-role-b">תפקיד</label>
-              <input type="text" id="f-role-b" name="role" placeholder="מנהל/ת, יועץ/ת, הורה..." required>
+              <label for="f-school-b">שם בית הספר</label>
+              <input type="text" id="f-school-b" name="school" placeholder="בית ספר..." required>
             </div>
             <div class="fg">
               <label for="f-phone-b">טלפון</label>
               <input type="tel" id="f-phone-b" name="phone" placeholder="05X-XXXXXXX" required>
             </div>
           </div>
-          <div class="fg">
-            <label for="f-msg-b">מה הכי מעניין אתכם לשמוע?</label>
-            <textarea id="f-msg-b" name="message" placeholder="ספרו לנו קצת על בית הספר שלכם..."></textarea>
-          </div>
           <button type="submit" class="btn-submit">אשמח לשמוע עוד על הסדנה</button>
-          <a href="https://wa.me/972506807708?text=%D7%94%D7%99%D7%99%20%D7%99%D7%92%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A1%D7%93%D7%A0%D7%AA%20%22%D7%99%D7%9C%D7%93%D7%99%D7%9D%20%D7%91%D7%A8%D7%A9%D7%AA%22%20%D7%9C%D7%91%D7%99%D7%AA%20%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A9%D7%9C%D7%A0%D7%95" target="_blank" rel="noopener" class="btn-wa">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            מעדיפים וואטסאפ? שלחו הודעה
-          </a>
         </form>
       </div>
     </div>
@@ -940,19 +985,6 @@
 <div class="section-nav-tooltip" id="sectionNavTooltip"></div>
 
 <script>
-  // Hero video
-  (function() {
-    var v = document.getElementById('heroVideo');
-    if (!v) return;
-    var src = window.innerWidth <= 720
-      ? 'images/hero-loop-mobile.mp4'
-      : 'images/hero-loop.mp4';
-    var s = document.createElement('source');
-    s.src = src; s.type = 'video/mp4';
-    v.appendChild(s); v.load();
-    v.play().catch(function(){});
-  })();
-
   // Reveal on scroll
   var obs = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
